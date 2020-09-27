@@ -10,23 +10,29 @@
 #include <string> 
 
 class Person{
-    public:
+    protected:
     std::string name;
     int age;
 
 
-    Person(std::string name,int age){
+    Person(std::string names,int ages){
         std::cout << "construcor called" << std::endl;
-        name = name;
-        age = age;
+        name = names;
+        age = ages;
     }
 
+
+    public:
     void printName(){
         std::cout << "Name is " << name << std::endl;
     }
 
     
 };
+
+class Blackman: public Person{
+    
+}
 
 int main(){
 	
