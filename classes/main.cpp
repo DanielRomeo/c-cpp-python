@@ -23,7 +23,8 @@ class Person{
 
 
     public:
-    void printName(){
+    // adding a const to the getter will restrict this function from being able to set something in it:
+    void printName() const{
         std::cout << "Name is " << name << std::endl;
     }
 
@@ -32,7 +33,7 @@ class Person{
 
 class Blackman: public Person{
     
-}
+};
 
 int main(){
 	
