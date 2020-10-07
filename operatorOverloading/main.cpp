@@ -51,7 +51,7 @@ int main(){
     Money cash(2), interest(3), total(0);
     total = cash + interest;
     cout << "Output is : ";
-    total.output(cout);
+    // total.output(printf);
     return 0;
 }
         
