@@ -8,8 +8,11 @@
 // using namespace std;
 #include <fstream>
 #include <string> 
+#include <limits>
+
 using namespace std;
 
+typedef std::numeric_limits< double > dbl;
 class ExamType{
     private:
     string module;

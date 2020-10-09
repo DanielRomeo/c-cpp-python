@@ -3,9 +3,6 @@
 #include <cstdlib>
 #include "math.h"
 #include <vector>
-// #include <inStream>
-// #include <outStream>
-// using namespace std;
 #include <fstream>
 #include <string> 
 
@@ -75,8 +72,7 @@ int main(){
     MyMeeting.SetDate(date);
 
     // display the contents:
-    // std::cout << "The contents of the meeting are : " <<"\t"<< "Speaker:"<< "\t"<<"Topic:"<< "\t"<< "Venue:"<< "\t"<< "Date:"<< std::endl;
-    // std::cout << "\t"<< "\t \t \t \t" << MyMeeting.GetSpeaker() << "\t"<< MyMeeting.GetTopic() << MyMeeting.GetVenue() << MyMeeting.GetDate() << std::endl; 
+    
     std::cout << "." << std::endl;
     std::cout << "Details of the venue are as follows...." << std::endl;
     std::cout << "Speaker: " << MyMeeting.GetSpeaker() <<std::endl;
