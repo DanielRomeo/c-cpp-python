@@ -14,8 +14,6 @@ int main(){
 	int j, k;
 
 	std::vector<int> v = {1,82,9,10};
-
-	// declare an iterator:
 	std::vector<int>::iterator i;
 
 	// loop through the vector:
@@ -26,9 +24,19 @@ int main(){
 	v.push_back(100);
 
 	// accesing elements using iterators:
-	for(i = v.begin(); i != v.end(); i++){
-		std::cout << *i << std::endl;
+	// for(i = v.begin(); i != v.end(); i++){
+	// 	std::cout << *i << std::endl;
+	// }
+
+	// will be able to change the value of x because its a reference param
+	for(int &x : v){
+		x += 100;
+		std::cout << x << std::endl;
 	}
+
+	for(int z : v){
+		std::cout << z << std::endl;
+	}	
 	
 	std::cout << ""<< std::endl;
 
