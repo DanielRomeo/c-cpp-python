@@ -10,13 +10,13 @@
 #include <string> 
 
 class Person{
-    protected:
+protected:
     std::string name;
     int age;
     int mutable mutableVar = 0; // mutable variable can be changed inside a const fuction:
 
 
-    public:
+public:
     Person(std::string names,int ages){
         std::cout << "construcor called" << std::endl;
         name = names;
