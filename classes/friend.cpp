@@ -22,20 +22,23 @@ class Person{
     }
     Person();
 
-    friend std::string changeName(Person person1);
+    friend std::string changeName(Person &person1, std::string newname);
 
     void printName(){
         std::cout << "Name is " << name << std::endl;
     }
 };
 
-
+//This doesnt work buddy
+std::string changeName(Person &person1, std::string newname ){
+    person1.name = "frank";
+}
 
 int main(){
 
     Person Daniel("daniel", 20);
 
-    changeName(Daniel);
+    changeName(Daniel, "jack");
     Daniel.printName();
 
     return 0;
