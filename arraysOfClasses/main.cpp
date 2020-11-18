@@ -16,10 +16,13 @@ class Person{
     Person(){
         name = "noname";
         age = 0;
-    }    
+    }   
 
-    void getAge(){
-        cout << age << endl;
+    void setAge(int value){
+        age = value;
+    }
+    int getAge(){
+        return age;
     };
 
     friend ostream &operator << (ostream & output , Person &p);
@@ -42,17 +45,20 @@ struct WindInfo{
 };
 
 int main(){
-    WindInfo Sam[5];
+    Person Sam[5];
+    int val;
 
     cout << "Fill in Sam 5 times" << endl;
     for(int i = 0; i < 5; i++){
-        cin >> Sam[i].velocity;
+        cin >> val;
+        Sam[i].setAge(val);
     }
 
-    cout << "Data :" << endl;
+    // cout << "Data :" << endl;
     
+    //get the ages of Sam[i]
     for(int i = 0; i < 5; i++){
-        cout << "Sam"<< i << " "<< Sam[i].velocity << endl;
+        cout << "age of sam is "<< i << " "<< Sam[i].getAge() << endl;
     }
     return 0;
 }
