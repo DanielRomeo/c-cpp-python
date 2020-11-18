@@ -19,7 +19,8 @@ class Money
     friend bool operator ==(const Money& amount1, const Money& amount2);
     friend Money operator +(const Money& amount1, const Money& amount2);
     friend Money operator -(const Money & amount1, const Money& amount2);
-    friend std::ostream& operator <<(std::ostream& outs, const Money& amount2);
+    friend std::ostream& operator <<(std::ostream& outs, const Money& amount);
+    friend std::istream& operator >>(std::istream& ins, const Money& amount);
 
     int getDollar(){
         return dollar;
@@ -42,6 +43,7 @@ int main(){
     Money sam(1);
     Money sam2(3);
     Money sam0(0);
+    Money newsam(0);
     std::string val;
 
 
@@ -55,8 +57,12 @@ int main(){
     sam0 = sam - sam2;
     std::cout << "Output is : "<< sam0.getDollar() << std::endl; // success
 
-    //testing << operator
-    std::cout << interest << " is thje interest" << std::endl; // success
+    // testing << operator
+    std::cout << interest << " is the interest " << interest << std::endl; // success
+
+    // testing the >> operator
+    std::cin >> newsam;//
+    std::cout << "Newsam.dollar is now: " << newsam << std::endl;
 
     // testing the == operator:
     if(sam == sam2){
@@ -84,9 +90,14 @@ Money operator -(const Money& amount1, const Money& amount2){
     return temp;   
 }
 
+// << >> operators
 std::ostream& operator <<(std::ostream& outs, const Money& amount){
     outs << amount.dollar;
     return outs;
+};
+std::istream& operator >>(std::istream& ins, const Money& amount){
+    ins >> amount.dollar;
+    return ins;
 };
 
 bool operator ==(const Money& amount1, const Money& amount2){
@@ -96,3 +107,4 @@ bool operator ==(const Money& amount1, const Money& amount2){
         return false;
     }
 }
+
