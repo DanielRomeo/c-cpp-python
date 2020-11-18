@@ -29,12 +29,7 @@ class Money
     //     dollar = 0;
     // };
     friend Money operator +(const Money amount1, const Money amount2);
-    //Precondition: amount1 and amount2 have been given values.
-    //Returns the sum of the values of amount1 and amount2.
-
-    //lets add a money friend function that adds:
-    // it returns a type Money:
-    //friend Money add(const Money& amount1, const Money& amount2);
+  
 
     // these allow me to return steam of Moneytype:
     // void input(istream& ins);
