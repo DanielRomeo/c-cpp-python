@@ -1,30 +1,33 @@
 #include <iostream>
 #include <cmath>
 #include <cstdlib>
-#include "math.h"
 #include <vector>
 #include <cstdio>
-// using namespace std;
+#include <fstream>
 
 
+#include "main.h"
+using namespace std;
 
 
+Person::Person(string thename, float thesalary){
+	name = thename;
+	salary = thesalary;
+};
+Person::Person();
+
+string Person::getname(){
+	return name;
+};  
+void Person::setSalary(float amount){
+	salary = amount;
+	cout << "Salary has been set";
+};
+
+void Person::raiseSalary(int percent){
+	float newamount = salary * percent/100;
+	salary = newamount;
+};
 
 
-int main(){
-
-	int i;
-	long l;
-	char c;
-	float f;
-	double d;
-
-	scanf("%d %ld %c %f %lf", &i, &l, &c, &f, &d);
-	
-	printf("%d\n%ld\n%c\n%f\n%lf", i, l, c, f, d);
-	
-	std::cout << ""<< std::endl;
-
-    return 0;
-}
-    
+// friend ostream &operator <<(ostream& output, Person& person1);
