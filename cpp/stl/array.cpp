@@ -20,6 +20,10 @@ stl::array tutorial
     myarray.front()
     myarray.back()
     myarray.data() // returns the address of the array
+
+    vector.erase();
+    vector.erase(pos, pos)
+    vector.erase(vec.begin(), vec.end()+4) // takes addresses as params:
 */
 
 int main(){
@@ -29,11 +33,24 @@ int main(){
     std::array<std::string, 2> myarray3;
     myarray3 = {"david", "sam"};
 
-    std::vector<int> vec1 = {1000};
+    std::vector<int> vec1 = {1000, 3000, 100,150, 350};
     // int *p = &myarray.begin();
+    // vec1.pop_back();
 
-    std::cout << myarray.data() << std::endl;
-    std::cout << vec1.data() << std::endl;
+    /*Returning a memory address of an array or a vector */
+    // std::cout << myarray.data() << std::endl; // returns memory address
+    // std::cout << vec1.data() << std::endl; // returns memory address
+
+    // std::cout << "The pop_back() function retutns: " << vec1[1] << std::endl;
+
+    // vec1.insert(0,999); // this is wrong
+    //vec1.erase(vec1.begin(), vec1.begin()+2);
+
+    for (auto i = vec1.begin(); i < vec1.end(); i++)
+    {
+        std::cout << "Value is : " << *i << std::endl;
+    }
+    
 
     return 0;
 }
