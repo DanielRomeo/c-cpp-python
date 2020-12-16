@@ -1,16 +1,29 @@
 #include <stdio.h>
+#include <stdlib.h> /**/
 /*Here i learn how to pass arrays into function params*/
 /*And normal functions*/
 /*and call by references*/
 
+/*function that prints something*/
+void printSomething(){
+	char s[] = "hello world";
+	printf("%s\n", s);
+}
+
 int* addArrayPointer(int myarray[], int size){
-	int *sum = NULL;
+
+	/* this malloc will help me return a local variable safely. 
+	because the address of that veariable is now stored in a seperate heap and not the same memory stack
+	The program(*sum) will then get set to the the address of the heap[which contains our true value] 
+	*/
+	int *sum = (int*)malloc(sizeof(int)); 
 	int tempSum = 0 ;
 	for (int i = 0; i < size; ++i)
 	{
 		tempSum += myarray[i];
 	}
-	sum = &tempSum;
+	*sum = tempSum;
+	
 	return sum;
 }
 
@@ -73,6 +86,7 @@ int main(){
 	int myarray[] = {1,100, 11, 13};
 	int length = sizeof(myarray)/sizeof(myarray[0]);
 	int *mysum = addArrayPointer(myarray, length);
+	printSomething(); // if i stick something like this inbetweena fuction call that returns a 'local memory address' and a printing of that memory address variable then im bound to run into trouble
 	printf("value is : %d\n", *mysum);
 
 
