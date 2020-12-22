@@ -35,6 +35,8 @@ int main(){
 
     std::vector<int> vec1 = {1000, 3000, 100,150, 350};
     vec1.resize(1000);
+    std::cout << "Capacity is: "<< vec1.capacity() << std::endl;
+    std::cout << "Size is: "<< vec1.size() << std::endl;
     // int *p = &myarray.begin();
     // vec1.pop_back();
 
@@ -47,10 +49,10 @@ int main(){
     // vec1.insert(0,999); // this is wrong
     //vec1.erase(vec1.begin(), vec1.begin()+2);
 
-    for (auto i = vec1.begin(); i < vec1.end(); i++)
-    {
-        std::cout << "Value is : " << *i << std::endl;
-    }
+    // for (auto i = vec1.begin(); i < vec1.end(); i++)
+    // {
+    //     std::cout << "Value is : " << *i << std::endl;
+    // }
     
 
     return 0;
