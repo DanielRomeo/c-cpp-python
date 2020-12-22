@@ -34,6 +34,7 @@ int main(){
     myarray3 = {"david", "sam"};
 
     std::vector<int> vec1 = {1000, 3000, 100,150, 350};
+    vec1.resize(1000);
     // int *p = &myarray.begin();
     // vec1.pop_back();
 
