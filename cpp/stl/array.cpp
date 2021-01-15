@@ -20,6 +20,7 @@ stl::array tutorial
     myarray.front()
     myarray.back()
     myarray.data() // returns the address of the array
+    myarray.fill() will fill up the array with the one value that u specified
 
     vector.erase();
     vector.erase(pos, pos)
@@ -28,15 +29,6 @@ stl::array tutorial
 
 int main(){
 
-    std::array<int, 3> myarray = {100,105, 108};
-    std::array<int, 2> array2;
-    std::array<std::string, 2> myarray3;
-    myarray3 = {"david", "sam"};
-
-    std::vector<int> vec1 = {1000, 3000, 100,150, 350};
-    vec1.resize(1000);
-    std::cout << "Capacity is: "<< vec1.capacity() << std::endl;
-    std::cout << "Size is: "<< vec1.size() << std::endl;
     // int *p = &myarray.begin();
     // vec1.pop_back();
 
@@ -53,6 +45,20 @@ int main(){
     // {
     //     std::cout << "Value is : " << *i << std::endl;
     // }
+
+    std::array<int, 3> array = {100,105, 108};
+    std::array<int, 2> array2;
+    std::array<std::string, 2> array3;
+    array3 = {"david", "sam"};
+    std::array<int, 3> array4;
+
+    array4.fill(100);
+
+    std::vector<int> vec1 = {1000, 3000, 100,150, 350};
+    vec1.reserve(1000);
+    std::cout << "Capacity is: "<< vec1.capacity() << std::endl;
+    std::cout << "Size is: "<< vec1.size() << std::endl;
+    
     
 
     return 0;
