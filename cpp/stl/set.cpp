@@ -7,6 +7,7 @@
 #include <functional>
 #include <set>
 #include <string>
+#include <variant>
 
 /*
 Set
@@ -37,8 +38,8 @@ class Car{
 
 int main(){
 
+#if 0
     Car volvo("kim");
-
     std::set<int, std::greater<int> > numberset = {1,1,1,2,77,88,100};
     std::set<Car, std::greater<Car>> mycarset = { {"bmw"}, {"ferrari"}, volvo };
 
@@ -48,6 +49,38 @@ int main(){
     for(auto e: mycarset){
         std::cout << e.name << std::endl;
     }
-        
+#endif
+
+    {
+        /*After a lot of fighting with the compiler;
+        I have decided that I will step aside and go properly absirve variants... Then ill come back and tackle 
+        trying to loop through a set of variant*/
+
+        // create a set to store objects of different types
+        std::set<uint> set1= {1, 4};
+        std::set<uint> setD= {8};
+        std::set<uint>::iterator it0;
+        std::set< std::variant<uint, std::set<uint>, std::string >> set2 = { "sam", "tom"};
+        std::set<std::variant<uint, std::set<uint>, std::string >>::iterator itr;
+
+        // for (it0 = set1.begin();it0 != set1.end(); ++it0){
+            // if(auto value = std::get_if<std::string>(*itr)){// if its a string
+            //     std::string& v = *value;
+            // }
+            // std::cout << *it0 << ",";
+            // uint names = *it0;
+            // auto* value = std::get_if<uint>(names);
+        // }
+
+
+
+
+        // std::cout << set2.size();
+        // for (int i = 0; i < set2.size(); ++i)
+        // {
+            // std::cout << set2[1].data() << " " ;
+        //}
+    
+    }
     return 0;
 }

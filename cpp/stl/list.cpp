@@ -95,16 +95,7 @@ int main(){
 		// printList(list2);
 		// std::cout << list2.size();
 
-		// create a set to store objects of different types
-		std::set<uint> set1= {1};
-		std::set<uint> setD= {8};
-		std::set< std::variant<uint, std::set<uint>, std::string >> set2 = {NULL, 100, 5, set1, setD};
-		// std::cout << set2.size();
 		
-		for (int i = 0; i < set2.size(); ++i)
-		{
-			std::cout << i << " " ;
-		}
 	}
 		
 
