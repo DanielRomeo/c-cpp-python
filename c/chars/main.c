@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <string.h> // this is for the string functions
+#include <string.h> // this is for the string functions - strlen
 
 /*C doesnt have strings, instead we use arrays of chars*/
 /*scanf reads a string untill it encounters a white space*/

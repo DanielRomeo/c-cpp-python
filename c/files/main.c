@@ -1,6 +1,9 @@
 #include <stdio.h>
 #include <stdlib.h>
- 
+
+/*Thsis program has a bunch of functions to read, write and append
+.txt and html files*/
+
 int myfunc(void){
 	printf("scerev\n");
 }
@@ -35,7 +38,15 @@ int main(){
 
 	
 	//call read function:
-	readFromFile();
+	// readFromFile();
 
+	/*Try to read from a html file*/
+	fpointer = fopen("bacon.html", "r");
+	char singleLine[150];
+	while(!feof(fpointer)){
+		fgets(singleLine, 150, fpointer); // this gets one line and stores it in the first param
+		puts(singleLine);
+	}
+	fclose(fpointer);
 	return 0;
 }
