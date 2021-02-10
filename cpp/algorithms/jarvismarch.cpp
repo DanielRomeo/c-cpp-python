@@ -5,7 +5,7 @@
 #include <cmath>
 #include <set>
 /*Algorithm */
-
+/*The algorithm ...*/
 struct Coord{
 	int x;
 	int y;
@@ -24,13 +24,13 @@ int main(){
 	std::pair<int, int> coordspair;
 	std::set<std::pair<int, int>> coordsset;
 	std::set<std::pair<int, int>>::iterator it = coordsset.begin();
-	const int MAXRANGE = 1000;
+	const int MAXRANGE = 15;
 
 	//generate 10 numbers and create a pair  
 	srand((int)time(0));
 	int randomNumber;
 	int randomNumber2;
-	for (int i = 0; i < 50; ++i) // generate 5 coordinates
+	for (int i = 0; i < 10; ++i) // generate 5 coordinates
 	{
 		randomNumber = (rand()% MAXRANGE)+ 1;
 		randomNumber2 = (rand()% MAXRANGE)+ 1;
@@ -55,6 +55,8 @@ int main(){
 		}
 	}
 	std::cout << "Most southern point is : (" << mostSouthern.first << ","<< mostSouthern.second << ")" << std::endl;
+
+
 
 	return 0;
 }
