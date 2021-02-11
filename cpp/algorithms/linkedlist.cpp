@@ -33,6 +33,18 @@ void addToBeginning(Node* Head, Node* Item){
 	HeadNode = Item;
 }
 
+//function to add node ath Nth position:
+void addToNthPos(Node * Head, Node* Item, int n){
+	Node *p = Head;
+	int i = 0;
+	while(i != n){
+		p = p->link; 
+		i++;
+	}
+	Item->link = p->link;
+	p->link = Item;
+}
+
 int main(){
 	
 
@@ -44,17 +56,17 @@ int main(){
 	Node * temp4 = new Node();
 	
 
-	temp->data = 1994;
+	temp->data = 10;
 	temp->link = NULL;
 	HeadNode = temp;
 
-	temp2->data = 1600;
+	temp2->data = 20;
 	temp2->link = NULL;
 
-	temp3->data = 80000;
+	temp3->data = 30;
 	temp3->link = NULL;
 	
-	temp4->data = 100;
+	temp4->data = 40;
 	temp4->link = NULL;
 	
 	addToList(HeadNode, temp2);
@@ -66,6 +78,12 @@ int main(){
 	newHeadNode->data = 0;
 	newHeadNode->link = NULL;
 	addToBeginning(HeadNode, newHeadNode);
+
+	Node* newNodeB = new Node();
+	newNodeB->data = 777;
+	newNodeB->link = NULL;
+	addToNthPos(HeadNode,newNodeB, 3);
+
 
 	printList(HeadNode);
 
