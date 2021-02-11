@@ -6,7 +6,7 @@
 struct Node
 {
 	int data;
-	Node* link;
+	Node* link = NULL;
 };
 
 // function to add a item to end of linkedlist:
@@ -14,7 +14,6 @@ void addToList(Node* Head, Node* Item){
 	Node* tempAddress = Head;
 	while(tempAddress->link != NULL){
 		tempAddress = tempAddress->link;
-		std::cout << "still not null" << std::endl;
 	}
 	tempAddress->link = Item;
 }
@@ -25,7 +24,6 @@ void printList(Node* Head){
 		tempAddress = tempAddress->link;
 		std::cout << tempAddress->data << std::endl;
 	}
-	// tempAddress->link = Item;
 }
 
 int main(){
@@ -39,21 +37,22 @@ int main(){
 	Node * temp4 = new Node();
 	
 
-	temp->data = 2;
-	temp->link = temp2;
+	temp->data = NULL;
+	temp->link = NULL;
 	A = temp;
 
 	temp2->data = 1600;
-	temp2->link = temp3;
-
-	std::cout << "---> "<<A <<" "<< A->link <<" "<<A->data << std::endl;
+	temp2->link = NULL;
 
 	temp3->data = 80000;
-	temp3->link = temp4;
+	temp3->link = NULL;
 	
 	temp4->data = 100;
 	temp4->link = NULL;
 	
+	addToList(A, temp2);
+	addToList(A, temp3);
+	addToList(A, temp4);
 
 	printList(A);
 
