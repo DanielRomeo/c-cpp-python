@@ -45,9 +45,24 @@ void addToNthPos(Node * Head, Node* Item, int n){
 	p->link = Item;
 }
 
-int main(){
-	
+Node* reverse(Node* HeadNode){
+	Node * currentNode, *nextNode, *prevNode;
+	currentNode = HeadNode;
+	prevNode = NULL;
 
+	while(currentNode != NULL){
+		std::cout << "current: " << currentNode->data << " "<<currentNode->link << ", next is: "<<nextNode<< std::endl;
+		nextNode = currentNode->link;
+		currentNode->link = prevNode;
+		prevNode = currentNode;
+
+		currentNode = nextNode;
+	}
+	HeadNode = prevNode;
+	return HeadNode;
+};
+
+int main(){
 	
 	HeadNode = NULL;
 	Node * temp = new Node();
@@ -73,20 +88,26 @@ int main(){
 	addToList(HeadNode, temp3);
 	addToList(HeadNode, temp4);
 
-	//add node to beginning...
-	Node* newHeadNode = new Node();
-	newHeadNode->data = 0;
-	newHeadNode->link = NULL;
-	addToBeginning(HeadNode, newHeadNode);
+	/* add node to beginning... */
+	// Node* newHeadNode = new Node();
+	// newHeadNode->data = 0;
+	// newHeadNode->link = NULL;
+	// addToBeginning(HeadNode, newHeadNode);
 
-	Node* newNodeB = new Node();
-	newNodeB->data = 777;
-	newNodeB->link = NULL;
-	addToNthPos(HeadNode,newNodeB, 3);
+	/* add node to nth position */
+	// Node* newNodeB = new Node();
+	// newNodeB->data = 777;
+	// newNodeB->link = NULL;
+	// addToNthPos(HeadNode,newNodeB, 3);
 
 
 	printList(HeadNode);
+	std::cout << " ---- " << std::endl; 
+	// reverse(HeadNode);	
 
+	// Node * one; 
+	HeadNode = reverse(HeadNode);
+	printList(HeadNode);
 	
 	return 0;
 } 
