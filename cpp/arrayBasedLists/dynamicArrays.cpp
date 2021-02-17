@@ -37,7 +37,9 @@ void inputValues(){
 	for(int i = 0; i < len; i++){
 		std::cout << array[i] << " ";	
 	}	
+
 	puts("\n");
+	delete p[];
 }
 
 int main(){
@@ -45,3 +47,4 @@ int main(){
 
 	return 0;
 }
+

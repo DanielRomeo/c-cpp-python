@@ -7,7 +7,7 @@
 // #include <outStream>
 // using namespace std;
 #include <fstream>
-#include <iomanip> // need this to use setw:
+#include <iomanip> // need this to use setw: for precesions
 using namespace std;
 
 
