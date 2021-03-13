@@ -1,21 +1,20 @@
 #include <iostream>
-#include <cmath>
-#include <cstdlib>
-#include <string>
 
 /*The following class */
-class pointerDataClass{
+class PointerDataClass{
 public:
-	~pointerDataClass();
+	PointerDataClass(int a);
+	~PointerDataClass();
 private:
 	int x;
 	int lenP;
 	int *p;
-}
+};
 
 int main(){
 
 	/**/
+	std::cout << "Hello, world" << std::endl;
 
 
 	return 0;
