@@ -31,7 +31,7 @@ void function(){
 }
 
 /* make sure you dont confuse these 2,the first one, a \0 will be added to the end of it, hence
-	the length will ne 6 no 5
+	the length will be 6 no 5
 */
 /*Note, always make sure u never change the value of the \0 in a string otherwise we will lose memory. */
 char s1[] = "hello";
