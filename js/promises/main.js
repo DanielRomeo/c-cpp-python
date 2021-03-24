@@ -29,4 +29,80 @@ p.then(message =>{
 /*Promises are made to replace callbacks, 
 so we have a call back illustration below*/
 
-const userLeft
+
+/*
+const userStoppedWatching = true;
+const userWatchingOtherVideo = true;
+const watchVideo = (callback, errorCallback) => {
+	if(userStoppedWatching){
+		obj = {
+			title: 'user stopped watching'
+		}
+		errorCallback(obj);
+	}else if(userWatchingOtherVideo){
+		obj = {
+			title: 'user is watching other videos'
+		}
+		errorCallback(obj);
+	}else{
+		obj = {
+			title: 'user is still wacthing your video'
+		}
+		callback(obj);
+	}
+}
+watchVideo( (obj)=>{
+	let newObj = {
+		...obj,
+		success: true
+	}
+	console.log(newObj);
+}, (obj)=>{
+	let newObj = {
+		...obj,
+		success: false
+	}
+	console.log(newObj);
+} );*/
+
+/* The promises solution */
+const userStoppedWatching = true;
+const userWatchingOtherVideo = true;
+
+const watchVideoPromise = () => {
+	return new Promise(( resolve, reject )=>{
+		if(userStoppedWatching){
+			obj = {
+				title: 'user stopped watching'
+			}
+			reject(obj);
+		}else if(userWatchingOtherVideo){
+			obj = {
+				title: 'user is watching other videos'
+			}
+			reject(obj);
+		}else{
+			obj = {
+				title: 'user is still wacthing your video'
+			}
+			resolve(obj);
+		}
+	}); // end of promise
+} // end of watchVideoPromise function
+
+
+watchVideoPromise()
+	.then( obj => {
+		let newObj = {
+			...obj,
+			success: true
+		}
+		console.log(newObj);
+	})
+	.catch( obj => {
+		let newObj = {
+			...obj,
+			success: false
+		}
+		console.log(newObj);
+	});
