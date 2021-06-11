@@ -1,15 +1,13 @@
 #include <iostream>
+#include "LinkedList.h"
 
-struct Node{
-	int data;
-	int *link;
+	
+Linkedlist::Linkedlist(int number){
+	number = number;
 }
 
-class LinkedList
-{
-public:
-	LinkedList();
-	~LinkedList();
+Linkedlist::~Linkedlist(){
+	
+}
 
-	void insert(const );
-};
+
