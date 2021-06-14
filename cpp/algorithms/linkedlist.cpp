@@ -45,6 +45,20 @@ void addToNthPos(Node * Head, Node* Item, int n){
 	p->link = Item;
 }
 
+// function that determines the maximum value
+int determineMax(Node * Head){
+	// traverse the list and store the max value
+	int max = Head->data;
+	Node* currentNode = Head;
+	
+	while(currentNode->link !== NULL){
+		if(currentNode->data > max){
+			max = currentNode->data;
+		}
+	};
+	return max;
+}
+
 Node* reverse(Node* HeadNode){
 	Node * currentNode, *nextNode, *prevNode;
 	currentNode = HeadNode;

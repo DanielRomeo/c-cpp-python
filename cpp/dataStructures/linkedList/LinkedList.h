@@ -2,25 +2,29 @@
 #define LINKEDLIST_H
 
 
-struct Node{
-	int data;
-	int *link;
-};
+// struct Node{
+// 	int data;
+// 	Node *link = NULL;
+// };
 
+template<class Type>
 class Linkedlist
 {
 public:
-	Linkedlist(int number);
-	~Linkedlist();
+	Linkedlist(Node* node);
+	// ~Linkedlist();
 
-	void addNode(Node newNode);
-	void addNodeToNthPos();
-	void deleteNode();
-	void addToBeginning();
-	void reverse(Node* HeadNode);
+	// void addToList(Node* HeadNode, Node* newNode);
+	// void addNodeToNthPos(Node* HeadNode, Node* Node);
+	// void deleteNode(Node* HeadNode, Node* delNode);
+	// void addToBeginning(Node* HeadNode);
+	// void reverse(Node* HeadNode);
+	void print();
+	Type max();
 
 private:
-	int number = 0;
+	
+	
 };
 
 
