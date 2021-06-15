@@ -1,20 +1,42 @@
-#include <stdio.h>
-#include <stdlib.h>
+#include <iostream>
+#include <string>
+// #include <stdio.h>
+// #include <stdlib.h>
+
+class Data{
+public:
+	Data(){
+
+	}
+	~Data(){
+		delete p;
+		p = NULL;
+	}
+
+	void get(){
+		int *s = new int;
+		*s = 1000; 
+		std::cout << *s << std::endl;
+	}
+private:
+	int x;
+	int lenP;
+	int *p;
+};
 
 int main(){
-	// 10 million
-	long j= 0;
-	long s = 0;
-	for(long i = 0; i < 10000000; i++){
-		for (int p = 0; p < 10; p++)
-		{
-			s++;
-			j++;
-		}
-		// j++;
-		
-	}
-	printf("%ld\n", j);
+	
+	std::string sam;
+	int x = 1500;
+	int *p = &x;
+	sam = *p;
+
+	// int value = &p;
+	std::cout<< sam <<  std::endl;
+
+
+	Data romeo;
+	romeo.get();
 
 	return 0;
 }

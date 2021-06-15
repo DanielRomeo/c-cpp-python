@@ -28,3 +28,7 @@ terms of the input size.
 - [ ] Explain the basic concepts of stacks.
 - [ ] Implement a stack using an array.
 - [ ] Apply the STL stack container.
+
+##### What i still need to know
+- Why pass an ampersand in between a data type name and function name , when declaring a function
+- overloading assignment operator for objects theat have pointers in them
