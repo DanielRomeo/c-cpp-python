@@ -1,11 +1,8 @@
-/*
-	
-*/
-
 #include <iostream>
-int main(){
+#include "List.h"
 
-	
+
+int main(){
 
 	return 0;
 }
