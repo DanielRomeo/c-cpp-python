@@ -4,7 +4,6 @@
 template <class Type>
 class List{
 public:
-	List();
 	const List<Type>& operator = (const List<Type>&); // overloading assinment
 	bool isEmpty() const;
 	bool isFull() const;
@@ -19,7 +18,13 @@ public:
 	void replaceAt(int location, Type& repItem);
 	void clearList() const;
 	int seqSearch(const Type& item) const; 
-private:
+	List(int size = 100); // constructor
+	List(const List<Type>& otherList); // copy constructor
+	~List(); // destructor
+protected:
+	Type * list;
+	int lenght;
+	int maxSize;
 }
 
 
