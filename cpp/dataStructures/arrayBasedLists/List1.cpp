@@ -1,9 +1,20 @@
 #include <iostream>
+#include <assert.h>
 #include "List1.h"
 
-// List1::List1(){
-
-// }
+template <class Type>
+List1<Type>::List1(int size){
+	if(size < 0){
+		std::cerr << "The list size must be positive, Creating a list size of 100!" << std::endl;
+		maxSize = 100;
+	}else{
+		maxSize = size;
+	}
+	length = 0;
+	list = new Type[maxSize];
+	assert(list != NULL);
+	
+};
 
 template <class Type>
 bool List1<Type>::isEmpty()const{
@@ -50,5 +61,16 @@ void List1<Type>::insertAt(int location, const Type& item){
 			// write algo that loops backwards and adds the item at the desired location
 		}
 	}
-};
+}
+
+template <class Type>
+void List1<Type>::insertEnd(const Type& item){
+	if(length >= maxSize){
+		std::cerr << "The list is full!" << std::endl;
+	}else{
+		list[length] = item;
+		length++;
+	}
+}
+
 
