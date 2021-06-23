@@ -1,14 +1,14 @@
-#ifdef LIST.H
-#define LIST.H
+#ifndef LIST1_H
+#define LIST1_H
 
 template <class Type>
-class List{
+class List1{
 public:
-	const List<Type>& operator = (const List<Type>&); // overloading assinment
+	const List1<Type>& operator = (const List1<Type>&); // overloading assinment
 	bool isEmpty() const;
 	bool isFull() const;
 	int listSize() const;
-	int maxListSize() const;
+	int maxList1Size() const;
 	void print() const;
 	bool isItemAtEqual(int location, const Type& item) const;
 	void insertAt(int location, const Type& item); // insert item at location position
@@ -18,14 +18,14 @@ public:
 	void replaceAt(int location, Type& repItem);
 	void clearList() const;
 	int seqSearch(const Type& item) const; 
-	List(int size = 100); // constructor
-	List(const List<Type>& otherList); // copy constructor
-	~List(); // destructor
+	List1(int size = 100); // constructor
+	List1(const List1<Type>& otherList); // copy constructor
+	~List1(); // destructor
 protected:
 	Type * list;
-	int lenght;
+	int length;
 	int maxSize;
-}
+};
 
 
 #endif
