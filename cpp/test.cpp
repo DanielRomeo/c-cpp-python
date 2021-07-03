@@ -30,6 +30,9 @@ int main(){
 	int x = 1500;
 	int *p = &x;
 	sam = *p;
+	char [10] chars;
+
+	chars[i] = 'a';
 
 	// int value = &p;
 	std::cout<< sam <<  std::endl;
