@@ -30,8 +30,16 @@ void rotateVector(std::vector<int> &vec){
 
 
 
-void rotateList(){
-
+void reverseList(std::list<int> &mylist){
+	std::reverse(mylist.begin(), mylist.end());
+	std::cout << "Succefully reversed the list" << std::endl;
+}
+void printList(std::list<int> mylist){
+	std::list<int>::iterator ptr;
+	for(ptr = mylist.begin(); ptr != mylist.end(); ptr++){
+		std::cout << *ptr << std::endl;
+	}
+	std::cout << std::endl;
 }
 
 
@@ -42,12 +50,15 @@ int main(){
 	std::vector<int> myvector = {};
 	std::vector<int> myvector2 = {1000, 2000};
 
+	reverseList(mylist);
+	printList(mylist);
 
-	insertintoVector(myvector);
-	printvector(myvector);
-	std::swap(myvector, myvector2);
+
+	// insertintoVector(myvector);
+	// printvector(myvector);
+	// std::swap(myvector, myvector2);
 	// reverseVector(myvector);
-	printvector(myvector);
+	// printvector(myvector);
 
 	return 0;
 }
