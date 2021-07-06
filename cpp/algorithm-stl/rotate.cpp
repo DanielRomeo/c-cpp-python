@@ -40,10 +40,13 @@ int main(){
 	// Instantiation:
 	std::list<int> mylist = {1200,150,800};
 	std::vector<int> myvector = {};
+	std::vector<int> myvector2 = {1000, 2000};
+
 
 	insertintoVector(myvector);
 	printvector(myvector);
-	reverseVector(myvector);
+	std::swap(myvector, myvector2);
+	// reverseVector(myvector);
 	printvector(myvector);
 
 	return 0;
