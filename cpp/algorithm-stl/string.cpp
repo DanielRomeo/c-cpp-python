@@ -18,10 +18,10 @@ char convertStringToChar(std::string str){
 			char result = str[0];
 			return result;
 		}else{
-			throw 0;
+			throw str.length();
 		}
-	}catch(...){
-		std::cerr << "Length of paramater cannot be greater or smaller than : " << 1 << std::endl;
+	}catch(unsigned long x){
+		std::cerr << "Length of paramater cannot be : " << x << std::endl;
 		return '\0';
 	}
 }
@@ -53,7 +53,7 @@ int main(){
 
 	// std::cout << convertCharToString('A') << std::endl;
 
-	std::cout << convertStringToChar("k") << std::endl;
+	std::cout << convertStringToChar("ak") << std::endl;
 
 	return 0;
 }
