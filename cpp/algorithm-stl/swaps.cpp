@@ -53,7 +53,7 @@ void reverse(std::string str){
 		isLengthEven = true;
 		for(int i = 0; i < str.length()/2; i++){
 			// std::cout << str.length() << std::endl;
-			str = swapper(str, i , str.length() );
+			str = swapper(str, i , str.length()-i-1 );
 			// std::cout << str  << std::endl;
 		}
 	} 
