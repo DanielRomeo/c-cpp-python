@@ -4,11 +4,17 @@
 /*This map data structure sorts out the items in the set by the key and it eliminates the duplicates*/
 
 
-// function thats gonna print this map out:
-void printmap(){
-
-	std::cout << "print" << std::endl;
+/* function thats gonna print this map out:
+	this function uses a while loop: */
+void printmap(std::map<char, int>&mymap){
+	std::map<char, int>::iterator itr;
+	itr = mymap.begin();
+	while(itr != mymap.end() ){
+		std::cout << (*itr).first << ':' << (*itr).second << std::endl;
+		itr++;
+	}
 }
+
 // function that adds something to the map:
 
 
@@ -29,9 +35,11 @@ int main(){
     // create an iterator:
     std::map<char , int>::iterator it;
 
-    for(it = mymap.begin(); it != mymap.end(); ++it){
-    	std::cout << (*it).first << ':' << it->second << std::endl;
-    }
+    // for(it = mymap.begin(); it != mymap.end(); ++it){
+    // 	std::cout << (*it).first << ':' << it->second << std::endl;
+    // }
+
+    printmap(mymap);
 
 
 	return 0;
