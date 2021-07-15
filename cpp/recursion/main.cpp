@@ -20,9 +20,25 @@ int func(int value){
     
 }
 
+#if 0 ///  was just trying to figure out the nature of the nested return statments that happen hypothetically
+int yes0(){
+	return 2;
+}
+
+int yes(){
+	return yes0();
+}
+
+int ret(){
+	return yes();
+}
+#endif
+
 int main(){
 
     // func(5);
-    ret(5);
+    // ret(5);
+
+    // std::cout << ret() << std::endl;
     return 0;
 }
