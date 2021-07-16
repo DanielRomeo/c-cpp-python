@@ -17,10 +17,7 @@ void printTree(Node *root){
 }
 
 void preOrderPrint(Node *root){
-	std::cout << "called " << std::endl;
-	// std::cout << "returned for:" << root->data << std::endl;
 	if(root == NULL){
-		// std::cout << "returned for:" << root->data << std::endl;
 		return;	
 	} 
 	std::cout << root->data << std::endl;
@@ -39,7 +36,6 @@ Node * createNode(int value){
 Node* insertNode(Node *root, int data){
 	if(root == NULL){
 		Node * root = createNode(data);
-		std::cout << "created " << root->data << std::endl;
 		return root;
 	}else if(data <= root->data){
 		root->left = insertNode(root->left, data);
@@ -54,11 +50,11 @@ int main(){
 	Node * myRoot = NULL;
 
 	myRoot = insertNode(myRoot, 1000);
-	insertNode(myRoot, 300);
-	insertNode(myRoot, 800);
-	std::cout << (*myRoot).data << std::endl;
+	myRoot = insertNode(myRoot, 300);
+	myRoot = insertNode(myRoot, 800);
+	// std::cout << (*myRoot).data << std::endl;
 
-	// preOrderPrint(myRoot);
+	preOrderPrint(myRoot);
 
 	return 0;
 }
