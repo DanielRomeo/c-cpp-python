@@ -47,11 +47,12 @@ Node* insertNode(Node *root, int data){
 
 int main(){
 	// lets create an empty tree first and we will use the insert function to create the root node;
-	Node * myRoot = NULL;
+	Node * myRoot =	insertNode(myRoot, 1000);
+	insertNode(myRoot, 22000);
 
-	myRoot = insertNode(myRoot, 1000);
-	myRoot = insertNode(myRoot, 300);
-	myRoot = insertNode(myRoot, 800);
+	insertNode(myRoot, 100);
+	insertNode(myRoot, 1200);
+	insertNode(myRoot, 1800);
 	// std::cout << (*myRoot).data << std::endl;
 
 	preOrderPrint(myRoot);

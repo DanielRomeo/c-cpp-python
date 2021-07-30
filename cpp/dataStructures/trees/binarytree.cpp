@@ -2,37 +2,40 @@
 #include <algorithm>
 #include <string>
 
-
-
 struct Node
 {
-	Node * parent;
 	int item;
 	Node* left;
 	Node* right ;
 };
 
-Node RootNode;
-
-void printTree(Node *root){
-	std::cout << "" << std::endl;
+Node * createNode(int data){
+	Node * newNode;
+	newNode->item = data;
+	newNode->left = NULL;
+	newNode->right = NULL;
+	return newNode;
 }
 
-// function that inserts node into tree:
-void insertNode(Node *root, Node item){
-	/*when inserting we need to check if this is the root node or not...*/
-	// item.parent = root;
-	if(root->parent == NULL){ // 
-		
+Node * insertNode(Node * root, int data){
+	if(root == NULL){
+		return root = createNode(data);
+	}
+
+	if(data <= root->item){
+		return root = insertNode(root->left, data);
+	}else{
+		return root = insertNode(root->right, data);
 	}
 }
 
+
+
 int main(){
 
-	RootNode.parent = NULL;
-	RootNode.item = 10;
-
-
+	// create a node:
+	Node * mynode; 
+	insertNode(mynode, 1000);
 
 
 	return 0;
