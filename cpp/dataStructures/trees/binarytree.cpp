@@ -10,7 +10,7 @@ struct Node
 };
 
 Node * createNode(int data){
-	Node * newNode;
+	Node * newNode = new Node();
 	newNode->item = data;
 	newNode->left = NULL;
 	newNode->right = NULL;
@@ -19,14 +19,24 @@ Node * createNode(int data){
 
 Node * insertNode(Node * root, int data){
 	if(root == NULL){
-		return root = createNode(data);
+		Node * root = createNode(data);
+		return root;
 	}
-
-	if(data <= root->item){
-		return root = insertNode(root->left, data);
+	else if(data <= root->item){
+		 root->left = insertNode(root->left, data);
 	}else{
-		return root = insertNode(root->right, data);
+		 root->right = insertNode(root->right, data);
 	}
+	return root;
+}
+
+void inordertraversal(Node * root){
+	if(root == NULL){
+		return;	
+	} 
+	std::cout << root->item << std::endl;
+	inordertraversal(root->left);
+	inordertraversal(root->right);
 }
 
 
@@ -34,8 +44,14 @@ Node * insertNode(Node * root, int data){
 int main(){
 
 	// create a node:
-	Node * mynode; 
-	insertNode(mynode, 1000);
+Node * myRoot =	insertNode(myRoot, 1000);
+	insertNode(myRoot, 22000);
+
+	insertNode(myRoot, 100);
+	insertNode(myRoot, 1200);
+	insertNode(myRoot, 1800);
+
+	inordertraversal(myRoot);
 
 
 	return 0;
