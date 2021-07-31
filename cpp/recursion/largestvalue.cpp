@@ -16,7 +16,6 @@ int findlargest(int arr[], int i ){
 
 
 int main(){
-
 	int arr[] = {100, 800, 700, 10000};
 	int * p = &arr[0];
 	// std::cout << sizeof(arr)/sizeof(arr[0] ) << std::endl;

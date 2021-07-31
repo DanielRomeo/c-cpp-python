@@ -17,6 +17,7 @@ Node * createNode(int data){
 	return newNode;
 }
 
+/* change this insert algorithm for it to use iteration and the queue ds insead of recursion */
 Node * insertNode(Node * root, int data){
 	if(root == NULL){
 		Node * root = createNode(data);
