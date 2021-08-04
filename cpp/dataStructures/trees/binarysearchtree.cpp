@@ -31,6 +31,17 @@ void preOrderPrint(Node *root){
 	preOrderPrint(root->right);
 }
 
+void postOrderTraversal(Node *root){
+	if(root == NULL){
+		return;	
+	} 
+	preOrderPrint(root->left);
+	preOrderPrint(root->right);	
+	std::cout << root->data << std::endl;
+
+}
+
+
 //
 Node * createNode(int value){
 	Node * newNode = new Node();
