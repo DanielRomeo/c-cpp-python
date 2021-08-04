@@ -1,7 +1,7 @@
 #include <iostream>
 #include <algorithm>
 #include <string>
-
+#include <queue>
 
 
 struct Node
@@ -11,7 +11,6 @@ struct Node
 	Node* left;
 	Node* right ;
 };
-
 
 // function to find the height of a tree:
 int maxheight(Node * root){
@@ -38,7 +37,27 @@ void postOrderTraversal(Node *root){
 	preOrderPrint(root->left);
 	preOrderPrint(root->right);	
 	std::cout << root->data << std::endl;
+}
 
+void levelOrderTraversal(Node * root){
+	if(root == NULL){
+		return;	
+	}
+
+	std::queue<Node*> q;
+	q.push(root);
+
+	while(!q.empty()){
+		Node * current = q.front();
+		std::cout << current->data << std::endl;
+		if(current->left != NULL){
+			q.push(current->left);
+		}
+		if(current->right != NULL){
+			q.push(current->right);
+		}
+		q.pop();
+	}
 }
 
 
@@ -72,7 +91,7 @@ int main(){
 	insertNode(myRoot, 1800);
 	// std::cout << (*myRoot).data << std::endl;
 
-	preOrderPrint(myRoot);
+	levelOrderTraversal(myRoot);
 
 	return 0;
 }
