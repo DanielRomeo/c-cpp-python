@@ -12,6 +12,12 @@ struct Node
 	Node* right ;
 };
 
+
+// function to find the height of a tree:
+int maxheight(Node * root){
+	return 0;
+}
+
 void printTree(Node *root){
 	std::cout << "" << std::endl;
 }
