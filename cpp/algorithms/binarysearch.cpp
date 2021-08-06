@@ -8,8 +8,6 @@ int binarysearch(int array[], int sizeofarray, int searchvalue){
 	int end = sizeofarray-1;
 	int middle = 0;
 	int iterations = 0;
-	// int arraylength = sizeofarray;
-	// std::cout << end << std::endl;
 	
 	while(start <= end){
 		iterations++;
@@ -33,11 +31,8 @@ int binarysearch(int array[], int sizeofarray, int searchvalue){
 
 int main(){
 
-	int myarray[] ={10,15,20,25,30,35,40,45,60};
-	// std::sort(myarray);
+	int myarray[] = {10,15,20,25,30,35,40,45,60};
 	int sizeofarray = sizeof(myarray)/ sizeof(myarray[0]);
-
-	// std::cout << sizeofarray << std::endl;
 
 	// takes two params, the array star and the array end pos
 	std::sort(myarray, myarray+sizeofarray);
