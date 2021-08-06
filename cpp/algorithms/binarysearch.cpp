@@ -4,43 +4,47 @@
 
 // function that returns the pos of the value otherwise it returns -1:
 int binarysearch(int array[], int sizeofarray, int searchvalue){
-	int first = array[0];
-	int last = array[sizeofarray];
-	int middle = array[sizeofarray/2];
-	int arraylength = sizeofarray;
-
-	for(int i = 0; i < sizeofarray; ++i){
-		// std::cout << array[i] << std::endl;
-		if(searchvalue == middle){
-			// std::cout << "middle value" << std::endl;
-			return array[middle];
-			return 11;
-		}else if(searchvalue < middle){
-			last = middle;
-			arraylength = arraylength/2;
-			middle = array[arraylength];
-		}
-		else if(searchvalue > middle){
-			first = middle;
-			arraylength = arraylength/2;
-			middle = array[arraylength];
+	int start = 0;
+	int end = sizeofarray-1;
+	int middle = 0;
+	int iterations = 0;
+	// int arraylength = sizeofarray;
+	// std::cout << end << std::endl;
+	
+	while(start <= end){
+		iterations++;
+		// std::cout<< middle << std::endl;
+		middle = start+end / 2;
+		std::cout << "middle :" << middle << std::endl;	
+		if(searchvalue == array[middle]){
+			std::cout << "itr: "<< iterations << std::endl;
+			return middle;
+			
+		}else if(searchvalue < array[middle]){
+			end = middle-1;
+		}else{
+			start = middle-1;
 		}
 	}
+	
+	
 	return -1;
 }
 
 int main(){
 
-	int myarray[] ={1,2,4,5,6,76,66,222};
+	int myarray[] ={10,15,20,25,30,35,40,45,60};
 	// std::sort(myarray);
 	int sizeofarray = sizeof(myarray)/ sizeof(myarray[0]);
+
+	// std::cout << sizeofarray << std::endl;
 
 	// takes two params, the array star and the array end pos
 	std::sort(myarray, myarray+sizeofarray);
 
 	// binaray search algo:
-	int num = binarysearch(myarray, sizeofarray, 222);
-	std::cout << num << std::endl;
+	int num = binarysearch(myarray, sizeofarray, 15);
+	std::cout << "res:" << num << std::endl;
 
 	return 0;
 }
