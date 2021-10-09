@@ -41,5 +41,9 @@ int main(){
     // advance(vecIt, 2); //takes the iterator and the number of adnacements you want;
     std::cout << "The new position of the iterator is : " << *vecIt << std::endl;
 
+    // lets see what happens if i try to advance it way past the last value:
+    vecIt = next(vec10.begin(), 10);
+    std:cout << "The new position of the interaton is: " << * vecIt << std::endl;
+
     return 0;
 }
