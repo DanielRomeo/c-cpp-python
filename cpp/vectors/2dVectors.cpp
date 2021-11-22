@@ -9,11 +9,14 @@
 
 void print2dVector(std::vector<std::vector<int>> vec){
     for(int i = 0; i < vec.size(); ++i){
-        
-        std::cout << "-----" << std::endl;
+         std::cout << "\t";
+        // std::cout << "-----" << std::endl;
         for(int j = 0; j < vec[i].size(); ++j){
-            std::cout << vec[i][j] << std::endl;
+           
+            std::cout  << vec[i][j] << " ";
         }
+        std::cout << std::endl;
+        std::cout << "\t" << "-- -- --" << std::endl;
     }
 }
 
@@ -29,7 +32,7 @@ void generateAndPrintRandomMatrix(){
         std::vector<int> innervec;
 
         for(int j = 0 ; j < size; j++){
-            innervec.push_back(rand()% 100 + 1);
+            innervec.push_back(rand()% 89 + 10); // ensure that the numbers are always 2 digits from 10 to 97
         }
         vec.push_back(innervec);
         // innervec.empty();
