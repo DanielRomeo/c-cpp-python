@@ -13,6 +13,7 @@ int main(){
 		}
 		// j++;
 		
+		
 	}
 	printf("%ld\n", j);
 
