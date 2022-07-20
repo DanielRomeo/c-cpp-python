@@ -16,10 +16,17 @@ int main(){
     // }
 
     /*Program that asks a user to enter their name and it outpts their name using gets()*/
-    char str[50];
-    printf("Enter your name please?\n");
-    gets(str);
-    printf("Your name is : %s\n", str);
+    // char str[50];
+    // printf("Enter your name please?\n");
+    // gets(str);
+    // printf("Your name is : %s\n", str);
+
+    /*Program that uses scanf to get multiple values and prints them*/
+    int n;
+    printf("Enter an number: \n");
+    scanf("%d", &n);
+    printf("The number you entered is: %d", n);
+
 
     return 0;
 }
