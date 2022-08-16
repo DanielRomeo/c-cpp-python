@@ -3,6 +3,7 @@
 
 class Message{
     public:
+
         void printMessage();
 };
 
