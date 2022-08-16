@@ -26,7 +26,7 @@ int subtract(int a, int b){
 ```
 
 ### 3. main.c
-```c
+```cpp
 #include "stdio.h"
 #include "library.h"
 
