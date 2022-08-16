@@ -13,7 +13,7 @@ extern int subtract(int a, int b);
 ```
 
 ### 2. Library.c
-```cpp
+```c
 #include "stdio.h"
 
 int add(int a, int b){
@@ -26,7 +26,7 @@ int subtract(int a, int b){
 ```
 
 ### 3. main.c
-```cpp
+```c
 #include "stdio.h"
 #include "library.h"
 
