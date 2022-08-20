@@ -1,4 +1,6 @@
 make all --print-data-base --no-builtin-variables --no-builtin-rules --question
+make: *** No rule to make target 'all'.  Stop.
+
 # GNU Make 4.3
 # Built for x86_64-pc-linux-gnu
 # Copyright (C) 1988-2020 Free Software Foundation, Inc.
@@ -6,7 +8,7 @@ make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Fri Aug 19 15:22:40 2022
+# Make data base, printed on Sat Aug 20 10:03:26 2022
 
 # Variables
 
@@ -53,7 +55,7 @@ VSCODE_CODE_CACHE_PATH = /home/exodesktop/.config/Code/CachedData/e4503b30fc7820
 # environment
 LANG = C
 # environment
-XAUTHORITY = /run/user/1000/.mutter-Xwaylandauth.355ZQ1
+XAUTHORITY = /run/user/1000/.mutter-Xwaylandauth.4PQBR1
 # default
 .LOADED := 
 # default
@@ -63,7 +65,7 @@ MAKEFLAGS = pqrR
 # makefile
 CURDIR := /home/exodesktop/Documents/projects/c-cpp-python
 # environment
-APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL = true
+APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL = 1
 # environment
 LESSOPEN = | /usr/bin/lesspipe %s
 # automatic
@@ -89,7 +91,7 @@ SNAP_REEXEC =
 # automatic
 @F = $(notdir $@)
 # environment
-VSCODE_PID = 21595
+VSCODE_PID = 3499
 # environment
 XDG_SESSION_TYPE = wayland
 # automatic
@@ -97,7 +99,7 @@ XDG_SESSION_TYPE = wayland
 # environment
 BAMF_DESKTOP_FILE_HINT = /var/lib/snapd/desktop/applications/code_code.desktop
 # environment
-SESSION_MANAGER = local/exodesktop-VirtualBox:@/tmp/.ICE-unix/1421,unix/exodesktop-VirtualBox:/tmp/.ICE-unix/1421
+SESSION_MANAGER = local/exodesktop-VirtualBox:@/tmp/.ICE-unix/1649,unix/exodesktop-VirtualBox:/tmp/.ICE-unix/1649
 # automatic
 *F = $(notdir $*)
 # environment
@@ -143,7 +145,7 @@ SNAP_USER_COMMON = /home/exodesktop/snap/code/common
 # environment
 SNAP = /snap/code/105
 # environment
-INVOCATION_ID = b9206bcdbedb44ae97b537af89ef1f24
+INVOCATION_ID = 92c1d017c193462d9ddb03ea64045fa6
 # environment
 SNAP_REVISION = 105
 # environment
@@ -177,7 +179,7 @@ SNAP_ARCH = amd64
 # makefile
 .DEFAULT_GOAL := 
 # environment
-SYSTEMD_EXEC_PID = 1438
+SYSTEMD_EXEC_PID = 1670
 # environment
 DISPLAY = :0
 # environment
@@ -193,9 +195,9 @@ SNAP_DATA = /var/snap/code/105
 # environment
 SNAP_CONTEXT = DCNmJEoGEwon1jwLqcWeC19YEVvJqHphFT66QLJn8lEMBb4NKxcX
 # environment
-MANAGERPID = 1286
+MANAGERPID = 1515
 # environment
-GIO_LAUNCHED_DESKTOP_FILE_PID = 21556
+GIO_LAUNCHED_DESKTOP_FILE_PID = 3459
 # environment
 _ = /snap/code/105/usr/share/code/code
 # environment
@@ -203,7 +205,7 @@ XDG_RUNTIME_DIR = /run/user/1000
 # environment
 GDK_PIXBUF_MODULE_FILE = /home/exodesktop/snap/code/common/.cache/gdk-pixbuf-loaders.cache
 # environment
-JOURNAL_STREAM = 8:21856
+JOURNAL_STREAM = 8:22355
 # environment
 XDG_SESSION_CLASS = user
 # environment
@@ -255,9 +257,9 @@ SNAP_LIBRARY_PATH = /var/lib/snapd/lib/gl:/var/lib/snapd/lib/gl32:/var/lib/snapd
 
 # Directories
 
-# . (device 2051, inode 1068140): 11 files, no impossibilities.
+# . (device 2051, inode 1068140): 12 files, no impossibilities.
 
-# 11 files, no impossibilities in 1 directories.
+# 12 files, no impossibilities in 1 directories.
 
 # Implicit Rules
 
@@ -280,8 +282,6 @@ Makefile:
 
 # Not a target:
  
-make: *** No rule to make target 'all'.  Stop.
-
 all:
 #  Command line target.
 #  Implicit rule search has been done.
@@ -310,12 +310,12 @@ GNUmakefile:
 
 # No general ('VPATH' variable) search path.
 
-# strcache buffers: 1 (0) / strings = 19 / storage = 147 B / avg = 7 B
-# current buf: size = 8162 B / used = 147 B / count = 19 / avg = 7 B
+# strcache buffers: 1 (0) / strings = 20 / storage = 153 B / avg = 7 B
+# current buf: size = 8162 B / used = 153 B / count = 20 / avg = 7 B
 
-# strcache performance: lookups = 22 / hit rate = 13%
+# strcache performance: lookups = 23 / hit rate = 13%
 # hash-table stats:
-# Load=19/8192=0%, Rehash=0, Collisions=0/22=0%
-# Finished Make data base on Fri Aug 19 15:22:40 2022
+# Load=20/8192=0%, Rehash=0, Collisions=0/23=0%
+# Finished Make data base on Sat Aug 20 10:03:26 2022
 
  
