@@ -5,11 +5,12 @@
 
 int main(){
 	
-	for(int i = 0; i < 1000000; i++){
-		i *= 3000;
-		i+= 2000-i;
-		std::cout << i << std::endl;
-	}
+	int* ptr ;
+	// int number = 100;
+	// ptr = &number;
+	*ptr = 400;
+
+	std::cout << *ptr <<std::endl;
 		
 	return 0;
 }
