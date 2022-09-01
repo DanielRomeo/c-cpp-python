@@ -12,7 +12,7 @@ int main(){
 	ptr = &number;
 	ptr3 = &number;
 
-	p = &ptr3;
+	p = &ptr3; // this is a pointer to pointer example
 
 	std::cout << "p's value is: " << **p << std::endl;
 
