@@ -34,6 +34,11 @@ void compareAndOutput(){
 	
 }
 
+// function: this is an ordinary functio>>>>
+int getnumber(){
+	return 1000;
+}
+
 int main(){
 	int x,y;
 	x = 8;
