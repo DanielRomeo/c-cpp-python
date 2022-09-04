@@ -8,6 +8,10 @@ int * function(){
 }
 
 int main(){
+
+    // create a dummy array:
+    // int arr[10];
+
     printf("%d\n", 10090);
     return 0;
 }
