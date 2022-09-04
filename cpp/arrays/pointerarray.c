@@ -6,10 +6,10 @@ int * function(){
     static int r[10];
     int i;
    
-
+     srand( (unsigned)time(NULL) );
     for(i = 0; i < 10; ++i){
-        srand( (unsigned)time(NULL) );
-        r[i] = rand() % 100;
+       
+        r[i] = rand() % 10;
     }
 
     return r;
@@ -24,7 +24,7 @@ int main(){
     p = function();
 
     for(i =0; i < 10; ++i){
-        printf("%d: %d\n", i, *p+1 );
+        printf("%d: %d\n", i, *(p+i) );
 
     }
 
