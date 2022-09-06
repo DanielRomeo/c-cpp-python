@@ -1,0 +1,1 @@
+Statically allocated arrays exist as long as the program is running (regardless of scope). Automatically allocated arrays exist as long as they are in scope.. And dynamically allocated arrays (i.e., malloc/free) exist however long your program specifies: from the moment they are allocated until they are finally freed. 
