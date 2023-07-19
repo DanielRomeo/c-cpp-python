@@ -7,7 +7,7 @@
 
 /*
     vectors:
-    What i realised is that ist capacity will double whenever we insert elements to a point where it reaches max capacity.
+    What i realised is that its capacity will double whenever we insert elements to a point where it reaches max capacity.
     If i instanitate the vector with elements inside, the capacity is = to the number of elements...
     resize() method will make sure that the size of the vector equals the number you produced...{ if u had 2 elements and u resize(5), 
     then index 3,4,5 will new equal 0,0,0} and thus u have 5 elments...
@@ -23,7 +23,7 @@ int main(){
     // vec.reserve(32);
     for(auto i = 0; i < 24; i++){
         vec.push_back(i);
-        std::cout<< "VALUE : " << vec[i] <<" ,CAPACITY : " << vec.capacity() << " , SIZE : " << vec.size() <<  std::endl;
+        //std::cout<< "VALUE : " << vec[i] <<" ,CAPACITY : " << vec.capacity() << " , SIZE : " << vec.size() <<  std::endl;
     }
 
     // second vector to test the size:
