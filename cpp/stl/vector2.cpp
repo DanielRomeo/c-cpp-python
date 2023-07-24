@@ -1,6 +1,13 @@
 #include <iostream>
 #include <vector>
 
+void print_container(const std::vector<int>& c) 
+{
+    for (int i : c)
+        std::cout << i << " ";
+    std::cout << '\n';
+}
+
 /*
     Methods:
     vec.reserve() - regarding capacity, it just increases the capacity, only if you pass in a value that is greater than the current capacity. if lower, nothing will happen.
@@ -43,8 +50,20 @@ int main(){
     vecA.insert(vecA.begin(), vecB.begin(), vecB.end());
     // print this vecA, to see if the elements in vecB were inserted at the beginning:
     for(auto j = vecA.begin(); j < vecA.end(); j++){
-        std::cout << *j << std::endl;
+        // std::cout << *j << std::endl;
     }
+
+    std::cout << "------------" << std::endl;
+
+    // using the erase method:
+    std::vector<int> shortVector = {1,2,3,4,5};
+    std::vector<int>::iterator it = shortVector.begin(); // declaration of the vector iterator
+    shortVector.erase(it+2, shortVector.end());
+
+
+    // shortVector.erase(shortVector.begin());
+    print_container(shortVector);
+
 
 
 
