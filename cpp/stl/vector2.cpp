@@ -36,6 +36,18 @@ int main(){
         std::cout << "value of vec1 is : " << *i << std::endl;
     }
 
+    // insert another vector inside my vector using the insert method:
+    // vec.insert(const_iterator pos, InputIt first, InputIt last)
+    std::vector<int> vecA = {1,2,3,4,5};
+    std::vector<int> vecB = {10,20,30};
+    vecA.insert(vecA.begin(), vecB.begin(), vecB.end());
+    // print this vecA, to see if the elements in vecB were inserted at the beginning:
+    for(auto j = vecA.begin(); j < vecA.end(); j++){
+        std::cout << *j << std::endl;
+    }
+
+
+
 
     return 0;
 }
