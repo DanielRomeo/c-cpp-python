@@ -35,14 +35,10 @@ int main(){
 
 	//generate 10 numbers and create a pair  
 	srand((int)time(0));
-	int randomNumber;
-	int randomNumber2;
 	for (int i = 0; i < 3; ++i) // generate 5 coordinates
 	{
-		randomNumber = (rand()% MAXRANGE)+ 1;
-		randomNumber2 = (rand()% MAXRANGE)+ 1;
 		coordspair.first = (rand()% MAXRANGE)+ 1;
-		coordspair.second = randomNumber2;
+		coordspair.second = (rand()% MAXRANGE)+ 1;
 		coordsset.insert(coordspair);
 	}
 
