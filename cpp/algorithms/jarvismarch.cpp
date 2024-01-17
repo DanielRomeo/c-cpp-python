@@ -41,7 +41,7 @@ int main(){
 	{
 		randomNumber = (rand()% MAXRANGE)+ 1;
 		randomNumber2 = (rand()% MAXRANGE)+ 1;
-		coordspair.first = randomNumber;
+		coordspair.first = (rand()% MAXRANGE)+ 1;
 		coordspair.second = randomNumber2;
 		coordsset.insert(coordspair);
 	}

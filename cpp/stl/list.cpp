@@ -12,7 +12,7 @@
 
 /*
 LIST: this is a doubly linked list::: [x|Data|y] -> [x|Data|y]
-lists are faster than vectors, deque, forward_lists in terms of inser, remove and moving items around. considering we have an iterator
+lists are faster than vectors, deque, forward_lists in terms of insert, remove and moving items around. considering we have an iterator
 we should use this instead of [doubly linked list] because it is well tested and bunch of functions
 operators: =, assign, front(returns first element), back(returns last element), empty(returns 1 or 0), 
 size, max_size, clear, insert, emplace(for optimization), push_back, pop_back, push_front, pop_front,

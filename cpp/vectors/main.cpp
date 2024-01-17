@@ -16,6 +16,9 @@ int main(){
 	std::vector<int> v = {1,82,9,10};
 	std::vector<int>::iterator i;
 
+	std::vector<int> v2 = {12, 24, 2222};
+	std::vector<std::vector<int>> vsquared = {v2};
+
 	// loop through the vector:
 	// for(j = 0; j < 4; j++ ){
 	// 	std::cout << v[j] << std::endl;
