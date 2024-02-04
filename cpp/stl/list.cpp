@@ -1,4 +1,17 @@
 #include <iostream>
+://github.com/DanielRomeo/c-cpp-pythonhttps://github.com/DanielRomeo/c-cpp-pythonhttps://github.com/DanielRomeo/c-cpp-pythonhttps://github.com/DanielRomeo/c-cpp-pythonerver {
+        listen 80;
+        listen [::]:80;
+
+        root /home/captainprice/actions-runner/randnote-blockchain/randnote-blockchain/randnote-blockchain/dist;
+        index index.html index.htm index.nginx-debian.html;
+
+        server_name blockchain.randnotex.co.za www.blockchain.randnotex.co.za;
+
+        location / {
+                try_files $uri $uri/ =404;
+        }
+}
 #include <cmath>
 #include <array>
 #include <string>
