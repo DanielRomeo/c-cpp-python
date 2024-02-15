@@ -13,7 +13,7 @@ void printVector(std::vector<int> vec){
 void moveByOne(std::vector<int> vec){
     int j = 0;
     for(int i = 0; i < vec.size(); i++){
-        if(vec[i] == 0){
+        if(vec[i] == 100){
             j=i;
             while(j >= 0 ){
                 vec[j] = vec[j-1];
@@ -26,7 +26,7 @@ void moveByOne(std::vector<int> vec){
 
 int main(){
 
-    std::vector<int> vec =  {1,2,3,4,5,0,6,7,8};
+    std::vector<int> vec =  {1,2,3,4,5,100,6,7,8};
     moveByOne(vec);
     // printVector(vec);
 
