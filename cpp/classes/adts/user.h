@@ -5,21 +5,19 @@
 #include <cctype>
 #include <cstdlib>
 #include <string>
-using namespace std;
-
 
 class User{
     private:
-        string name;
+        std::string name;
         int age;
 
     public:
-        User(string name, int age);
+        User(std::string name, int age);
         User( );
 
-        void setDetails(string name, int age);  
+        void setDetails(std::string name, int age);  
         void getDetails();
-        friend ostream &operator <<(ostream& output, User& user);
+        friend std::ostream &operator <<(std::ostream& output, User& user);
 };
 
 #endif

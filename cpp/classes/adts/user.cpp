@@ -5,9 +5,6 @@
 #include <vector>
 #include <cstdio>
 #include "user.h"
-using namespace std;
-
-
 
     User::User(string name, int age){
         this->name = name;
@@ -24,10 +21,10 @@ using namespace std;
     }   
 
     void User::getDetails(){
-        cout << "Name is "<< this->name << " and age is "<< this->age << endl;
+        std::cout << "Name is "<< this->name << " and age is "<< this->age << std::endl;
     }
 
     ostream & operator << (ostream& output, User &user){
-        output << user.name << endl;
+        output << user.name << std::endl;
         return output;
     }

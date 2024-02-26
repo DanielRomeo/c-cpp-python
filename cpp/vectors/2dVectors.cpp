@@ -1,10 +1,7 @@
-
 #include <iostream>
-
 #include <stdio.h>
 #include <stdlib.h>
 #include<time.h>
-
 #include <vector>
 
 void print2dVector(std::vector<std::vector<int>> vec){
@@ -19,8 +16,6 @@ void print2dVector(std::vector<std::vector<int>> vec){
         std::cout << "\t" << "-- -- --" << std::endl;
     }
 }
-
-
 
 void generateAndPrintRandomMatrix(){
     std::vector<std::vector<int>> vec;
