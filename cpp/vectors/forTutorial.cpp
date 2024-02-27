@@ -6,6 +6,7 @@
 std::vector operations to test:
 - standard traversal
 - traversal with iterators
+- test vector size and capacity
 
 std::vector methods to test:
 - push_back()
@@ -13,6 +14,7 @@ std::vector methods to test:
 - insert()
 - capacity()
 - size()
+- shrink_to_fit()
 
 */ 
 
