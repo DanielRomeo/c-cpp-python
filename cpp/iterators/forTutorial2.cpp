@@ -1,58 +1,60 @@
 #include <iostream>
-#include <vector>
-#include <list>
-#include <forward_list>
+#include <vector> // array link container
+#include <list> // doubly linked list
+#include <forward_list> // linked list
 
+// How to use an iterator to traverse? Using one function
 
-// How to use an iterator to traverse?
 // Difference between bi-directional and forward iterators
 // Difference between random access iterators and bi-directional iterators
 
 // Use range based for loop as an Alternative if you are allowed!
 
-// function to iterate over a container:
+// create a function that takes all types of containers:
 template<typename T>
-void iterateOverContainer(const T& container){
-  
-    // for(int i =0; i < container.size(); i++){
-    //     std::cout << container[i] << std::endl;
-    // }
-
-    typename T::const_iterator it = container.begin();
-    for(it; it != container.end(); ++it){
+void print(const T& containerName){
+    typename T::const_iterator it = containerName.begin();
+    for(it; it != containerName.end(); ++it){
         std::cout << *it << std::endl;
     }
+}
 
-
+// best way of doing things:
+// function:
+void printBetter(std::forward_list<int> flist){
+    for(auto elems: flist){
+        std::cout << elems << std::endl;
+    }
 }
 
 
 
 int main(){
     std::vector<int> vec = {1,2,3,4,5,6};
-    std::list<int> myList = {1,2,3,4,5,6};
-    iterateOverContainer(vec);
+    std::forward_list<int> flist = {1,2,3,4,5,6};
+    std::list<int> list = {1,2,3,4,5,6};
+    // print(list);
+    std::vector<int>::iterator vecIterator = vec.begin();
+    std::forward_list<int>::iterator flistIterator = flist.begin();
+    std::list<int>::iterator listIterator = list.begin();
 
-    // std::forward_list<int> fList ={10,20,30};
-    // std::forward_list<int>::iterator it;
+    flistIterator++;
+    // flistIterator--;
+    // std::cout << *flistIterator << std::endl;
 
-    // it = fList.begin();
-    // it++;
-    // it++;
-    // // it--;
-    // // it+1;
+    listIterator++;
+    listIterator--;
+    // listIterator+2;
+    // std::cout << *listIterator << std::endl;
 
-
-    // // random access iterator:
-
-    // std::vector<int> vec = {1,2,3,4,5};
-    // std::vector<int>::iterator itVec = vec.begin();
-    // itVec++;
-    // itVec+3;
+    // vecIterator++;
+    // vecIterator--;
+    // vecIterator+3;
+    vecIterator+2;
+    // std::cout << *vecIterator << std::endl;
 
 
-    // //std::cout << *it << std::endl;
-    // std::cout << *itVec << std::endl;
+    printBetter(flist);
 
     return 0;
 }
