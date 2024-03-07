@@ -13,7 +13,8 @@ struct Node{
 
 // function to hash the nodes together:
 size_t hash_nodes(const Node& node1, const Node& node2){
-    return std::hash<int>(node1.data) ^ std::hash<int>(node2.data);
+    // hash using the XOR operator
+    return std::hash<int>()(node1.data) ^ std::hash<int>()(node2.data);
 }
 
 int main(){
