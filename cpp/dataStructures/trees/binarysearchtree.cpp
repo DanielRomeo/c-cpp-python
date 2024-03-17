@@ -3,10 +3,8 @@
 #include <string>
 #include <queue>
 
-
 struct Node
 {
-	// Node * parent;
 	int data;
 	Node* left;
 	Node* right ;
@@ -61,7 +59,7 @@ void levelOrderTraversal(Node * root){
 }
 
 
-//
+// create node pointer
 Node * createNode(int value){
 	Node * newNode = new Node();
 	newNode->data = value;
@@ -89,7 +87,6 @@ int main(){
 	insertNode(myRoot, 100);
 	insertNode(myRoot, 1200);
 	insertNode(myRoot, 1800);
-	// std::cout << (*myRoot).data << std::endl;
 
 	levelOrderTraversal(myRoot);
 

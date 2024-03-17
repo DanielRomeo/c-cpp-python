@@ -70,10 +70,6 @@ void diomond(int num){
 
 int main(){
 	
-    //
-    // triangle(4);
-    // reverseTriangle(5);
-    // oppositetriangle(5);
     diomond(5);
     return 0;
 }
