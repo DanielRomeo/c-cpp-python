@@ -31,23 +31,21 @@ std::vector<std::vector<std::string>> addPieceAtPos(std::vector<std::vector<std:
 
 /* Write a function that finds the K value(knight) and then marks all possible jumps with a X*/
 void printPossibleJumps(std::vector<std::vector<std::string>> &board){
-    // std::vector<std::vector<std::string>>::iterator it = board.begin();
-    
-    // while(it != board.end()){
-    //     std::cout << 'a' <<std::endl;
-    // }
     std::string value = "K";
-    // while(){
-
-    // }
+    
     for(auto i = 0; i < board.size(); ++i){
         for(auto j =0; j < board[i].size(); ++j){
             if(board[i][j] == value){
                 //
-                std::cout << "found one"<< std::endl;
+                // std::cout << "found one"<< std::endl;
+
+                // board[i][j+10] = "T";
+
             }
         }
     }
+
+    printBoard(board);
 
 }
 
