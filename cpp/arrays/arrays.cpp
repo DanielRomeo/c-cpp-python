@@ -3,8 +3,6 @@
 #include <cstdlib>
 #include "math.h"
 #include <vector>
-// using namespace std;
-
 
 void compareAndOutput(){
 	int array[25];
@@ -27,11 +25,8 @@ void compareAndOutput(){
 		}
 	}
 	
-
 	std::cout << "Number who spends more than 20 minutes per day is " << incrementer << std::endl;
 
-
-	
 }
 
 // function: this is an ordinary functio>>>>

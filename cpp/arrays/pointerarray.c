@@ -5,8 +5,7 @@
 int * function(){
     static int r[10];
     int i;
-   
-     srand( (unsigned)time(NULL) );
+    srand( (unsigned)time(NULL) );
     for(i = 0; i < 10; ++i){
        
         r[i] = rand() % 10;

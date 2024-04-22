@@ -13,11 +13,9 @@ void arrayPrinter(int arr[], size_t size){
 }
 
 int main(){
-    //
     int myarr[] = {10, 200, 53};
    
     size_t mysize = sizeof(myarr)/sizeof(myarr[0]);
-    // printf("The size of my array is: %zu\n", mysize);
 
     arrayPrinter(myarr, mysize);
 
