@@ -12,7 +12,12 @@ struct Node
 
 // function to find the height of a tree:
 int maxheight(Node * root){
-	return 0;
+	if(root == NULL){
+		return 0;
+	}
+	int leftNode = maxheight(root->left);
+	int rightNode = maxheight(root->right);
+	return std::max(leftNode, rightNode) + 1;
 }
 
 void printTree(Node *root){
@@ -89,6 +94,8 @@ int main(){
 	insertNode(myRoot, 1800);
 
 	levelOrderTraversal(myRoot);
+
+	std::cout << "The height of the tree is : " << maxheight(myRoot) << std::endl;
 
 	return 0;
 }
