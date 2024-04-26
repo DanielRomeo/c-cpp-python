@@ -30,26 +30,44 @@ void traverseNode(Node * root){
     if(root == NULL){
         return;
     }
-    
-     traverseNode(root->left);
-    traverseNode(root->right);
     std::cout << root->data << std::endl;
+    traverseNode(root->left);
+    traverseNode(root->right);
+}
+
+// merge and print tree:
+void mergeAndPrintTree(Node * tree1, Node * tree2){
+    if(tree1 != NULL  || tree2 != NULL ){
+        Node * tree3 = insertNode(tree3, tree1->data + tree2->data);
+    }
+
+
+    // if(tree1->left != NULL ){
+    //     int value1 = tree1->data
+    // }
+    // if(tree2->left != NULL ){
+    //     int value2 = tree2->data
+    // }    
 }
 
 int main(){
 
     Node * myroot1 = insertNode(myroot1, 15);
-    // Node * myroot2 =  insertNode(myroot2, 12);
+    Node * myroot2 =  insertNode(myroot2, 12);
 
     // insert into the first tree:
     insertNode(myroot1, 10);
     insertNode(myroot1, 20);
 
     // insert into the second tree:
-    // insertNode(myroot2, 6);
-    // insertNode(myroot2, 30);
+    insertNode(myroot2, 6);
+    insertNode(myroot2, 30);
 
     traverseNode(myroot1);
+    std::cout << std::endl;
+    traverseNode(myroot2);
+
+    // run merge and print:
 
     return 0;
 }
