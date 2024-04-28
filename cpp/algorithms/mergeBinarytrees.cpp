@@ -26,7 +26,6 @@ Node * insertNode(Node * root, int value){
 
 // traverse a tree:
 void traverseNode(Node * root){
-    //
     if(root == NULL){
         return;
     }
@@ -36,18 +35,12 @@ void traverseNode(Node * root){
 }
 
 // merge and print tree:
-void mergeAndPrintTree(Node * tree1, Node * tree2){
-    if(tree1 != NULL  || tree2 != NULL ){
-        Node * tree3 = insertNode(tree3, tree1->data + tree2->data);
+Node * mergeTree(Node * tree1, Node * tree2){
+    Node * tree3 = nullptr;
+    if(tree1 == nullptr){
+        // return tree
     }
 
-
-    // if(tree1->left != NULL ){
-    //     int value1 = tree1->data
-    // }
-    // if(tree2->left != NULL ){
-    //     int value2 = tree2->data
-    // }    
 }
 
 int main(){

@@ -38,15 +38,6 @@ int main(){
 
 	nameType names[5];
 
-	// for (int i = 0; i < 5; ++i)
-	// {
-	// 	displayNames(names[i]);
-	// }
-
-	
-
-
-
     return 0;
 }
         
