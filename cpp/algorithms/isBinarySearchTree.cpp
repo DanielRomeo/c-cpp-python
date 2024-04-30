@@ -11,6 +11,7 @@
     A root will be inserted
 */
 
+// BST class
 template <typename T>
 struct Node{
     T data;
@@ -30,17 +31,39 @@ public:
     ~BST(){
 
     }
+
+    // Insert public method:
+    Node<T> * insert(const T &data){
+        return handleInsert(root, data);
+    }
 private:
     Node<T> * root;
-
-    // Insert method:
-    Node<T> * insert(T data){
-        //
-        return new Node(100);
+    Node<T> * handleInsert(Node<T>* current,  T data){
+        if(current == nullptr){
+            return new Node(data);
+        }
+        if(data < current->data){
+            current->left = handleInsert(current->left ,data);
+        }else{
+            current->right = handleInsert(current->right, data);
+        }
+        return current;
     }
 };
 
 int main(){
+
+    // creating a root node and intatiating the tree object:
+    Node<double> * mynode = new Node(100.0);
+    BST<double> B = BST(mynode);
+
+    // creating other nodes:
+    // Node<double> * mynode2 = new Node(80.0);
+    // Node<double> * mynode3 = new Node(300.4);
+
+    // inserting the nodes into the tree:
+    B.insert(80.0);
+    B.insert(100.49);
 
 
     return 0;
