@@ -35,10 +35,7 @@ int ret(){
 #endif
 
 int main(){
+	ret(4);
 
-    // func(5);
-    // ret(5);
-
-    // std::cout << ret() << std::endl;
     return 0;
 }

@@ -73,12 +73,11 @@ int main(){
     insertNode(myroot2, 30);
 
     traverseNode(myroot1);
-    std::cout << std::endl;
+    std::cout << std::endl; // leave empty line
     traverseNode(myroot2);
 
     // run merge and print:
-    Node * newTree = mergeTree(myroot1, myroot2);    
-    // traverseNode(newTree);
+    Node * newTree = mergeTree(myroot1, myroot2);  
 
     return 0;
 }
