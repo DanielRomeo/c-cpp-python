@@ -36,6 +36,16 @@ public:
     Node<T> * insert(const T &data){
         return handleInsert(root, data);
     }
+
+    // Print method:
+    void print(Node<T> * current ){
+        // Node * current = root;
+
+        // if(current != nullptr){
+        //     std::cout << current->data << std::endl;
+        // }
+
+    }
 private:
     Node<T> * root;
     Node<T> * handleInsert(Node<T>* current,  T data){
@@ -52,7 +62,6 @@ private:
 };
 
 int main(){
-
     // creating a root node and intatiating the tree object:
     Node<double> * mynode = new Node(100.0);
     BST<double> B = BST(mynode);
@@ -64,6 +73,9 @@ int main(){
     // inserting the nodes into the tree:
     B.insert(80.0);
     B.insert(100.49);
+
+    // print the tree:
+    // B.print();
 
 
     return 0;
