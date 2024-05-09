@@ -1,19 +1,25 @@
-#include <iostream>
-#include <string>
-#include <vector>
 #include <cmath>
+#include <cstdio>
+#include <vector>
+#include <iostream>
+#include <algorithm>
 
 
+void update(int * a, int * b){
+    *a = *a + *b;
+    *b = abs(&a-&b);
 
-int main(){
+	
+}
 
-	// std::string mystring = "hello";
-	// std::cout << mystring.size() <<std::endl;
+int main() {
+    /* Enter your code here. Read input from STDIN. Print output to STDOUT */   
+    int a, b;
+    std::cin >> a >> b;
+    int * a2 = &a;
+    int *b2 = &b;
+    update(a2, b2);
 
-	// check if number is finite:
-	double mydouble = 5.898;
-	std::cout << ( std::isfinite(mydouble) == true ? "true" : "false" )<< std::endl;
-
-
-	return 0;
+	std::cout << *a2 << " "<< *b2 <<std::endl;
+    return 0;
 }
