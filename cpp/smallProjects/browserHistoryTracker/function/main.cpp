@@ -56,6 +56,8 @@ void addURL( std::stack<std::string> & backward_stack, std::stack<std::string> &
                 forward_stack.pop();
             }
             backward_stack.push(URL);
+            std::cout << "You have successfully inserted the URL into the browser." << std::endl;
+            std::cout << std::endl;
             validated = true;
         }else{
             std::cerr << "The Url you are trying to insert is invalid" << std::endl;
@@ -64,21 +66,29 @@ void addURL( std::stack<std::string> & backward_stack, std::stack<std::string> &
 }
 
 void App(std::stack<std::string> & backward_stack, std::stack<std::string> & forward_stack){
-    // to string menu shower:
-    std::cout << "MENU" << "\n" << "1. New URL" << "\n" <<"2. Navigate back" << "\n" << "3. Navigate forward" << "\n" << "4. Exit" << std::endl;
 
-    // take user input:
-    int option;
-    std::cin >> option;
-    switch (option)
-    {
-    case 1:
-        addURL(backward_stack, forward_stack);
-        break;
-    
-    default:
-        break;
+    // create an infinite loop:
+    while(true){
+        // to_string MENU shower:
+        std::cout << "MENU" << "\n" << "1. New URL" << "\n" <<"2. Navigate back" << "\n" << "3. Navigate forward" << "\n" << "4. Exit" << std::endl;
+
+        // take user input and run neccessary function:
+        int option;
+        std::cin >> option;
+        switch (option)
+        {
+        case 1:
+            addURL(backward_stack, forward_stack);
+            break;
+        case 4:
+            return;
+        
+        default:
+            break;
+        }
     }
+
+    
 
 }
 
