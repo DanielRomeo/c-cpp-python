@@ -33,11 +33,32 @@ void fileInitializer(std::stack<std::string> & backward_stack){
     }
 }
 
-void navigateForward(std::stack<std::string> & forward_stack){
-    //
+void navigateForward(std::stack<std::string> & backward_stack, std::stack<std::string> & forward_stack){
+    if(forward_stack.empty()){
+        std::cerr << "There are no forward links !" << std::endl;
+        std::cout << "\n";
+
+    }else{
+        // remove element from forward stack, and place in backward stack:
+        backward_stack.push(forward_stack.top());
+        forward_stack.pop();
+        std::cout << "Navigated to " << backward_stack.top() << std::endl;
+        std::cout << "\n";
+    }
 }
-void navibateBackward(std::stack<std::string> & backward_stack){
-    //
+void navigateBackward(std::stack<std::string> & backward_stack, std::stack<std::string> & forward_stack){
+    // if the size of the backward_stack is 1, then there are no more links that come before.
+    if(backward_stack.size() == 1){  
+        std::cerr << "There are no backward links !" << std::endl;
+        std::cout << "\n";
+    }else{
+        // remove element from backward_stack, and place in forward stack:
+        forward_stack.push(backward_stack.top());
+        backward_stack.pop();
+        std::cout << "Navigated to " << backward_stack.top() << std::endl;
+        std::cout << "\n";
+
+    }
 }
 void addURL( std::stack<std::string> & backward_stack, std::stack<std::string> & forward_stack){
     bool validated = false;
@@ -63,10 +84,13 @@ void addURL( std::stack<std::string> & backward_stack, std::stack<std::string> &
             std::cerr << "The Url you are trying to insert is invalid" << std::endl;
         }
     }
+
+    std::cout << "Navigated to " << backward_stack.top() << std::endl;
+    std::cout << "\n";
 }
 
 void App(std::stack<std::string> & backward_stack, std::stack<std::string> & forward_stack){
-
+    
     // create an infinite loop:
     while(true){
         // to_string MENU shower:
@@ -80,31 +104,34 @@ void App(std::stack<std::string> & backward_stack, std::stack<std::string> & for
         case 1:
             addURL(backward_stack, forward_stack);
             break;
+        
+        case 2:
+            navigateBackward(backward_stack, forward_stack);
+            break;
+        case 3:
+            navigateForward(backward_stack, forward_stack);
+            break;
         case 4:
             return;
-        
         default:
             break;
         }
     }
-
-    
 
 }
 
 
 
 int main(){
+    // our current URL is always at the top of the backward_stack:
 
-    // create stack:
+    // create stacks:
     std::stack<std::string> forward_stack;
     std::stack<std::string> backward_stack;
 
+    // initialize the BrowserHistory file & start the application:
     fileInitializer(backward_stack);
     App(backward_stack, forward_stack);
-
-    
-
 
     return 0;
 }
