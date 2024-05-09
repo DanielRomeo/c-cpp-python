@@ -39,11 +39,16 @@ void navigateForward(std::stack<std::string> & forward_stack){
 void navibateBackward(std::stack<std::string> & backward_stack){
     //
 }
-void addURL(const std::string URL, std::stack<std::string> & backward_stack, std::stack<std::string> & forward_stack){
+void addURL( std::stack<std::string> & backward_stack, std::stack<std::string> & forward_stack){
     bool validated = false;
-
+    std::string URL;
+    
+    
     // Loop untill user inserts a valid URL:
     while(validated != true){
+        std::cout << std::endl;
+        std::cout << "Enter a URL" << std::endl;
+        std::cin >> URL;
         if(validateURL(URL)){
             // first we move all the items in forward_stack, to the backward_stack before we insert:
             for(int i =0; i < forward_stack.size(); i++){
@@ -59,7 +64,22 @@ void addURL(const std::string URL, std::stack<std::string> & backward_stack, std
 }
 
 void App(std::stack<std::string> & backward_stack, std::stack<std::string> & forward_stack){
+    // to string menu shower:
     std::cout << "MENU" << "\n" << "1. New URL" << "\n" <<"2. Navigate back" << "\n" << "3. Navigate forward" << "\n" << "4. Exit" << std::endl;
+
+    // take user input:
+    int option;
+    std::cin >> option;
+    switch (option)
+    {
+    case 1:
+        addURL(backward_stack, forward_stack);
+        break;
+    
+    default:
+        break;
+    }
+
 }
 
 
