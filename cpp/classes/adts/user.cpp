@@ -6,7 +6,7 @@
 #include <cstdio>
 #include "user.h"
 
-    User::User(string name, int age){
+    User::User(std::string name, int age){
         this->name = name;
         this->age = age;
     }
@@ -15,7 +15,7 @@
         // age = 0;
     }
 
-    void User::setDetails(string name, int age){
+    void User::setDetails(std::string name, int age){
         name = name;
         age = age;
     }   
@@ -24,7 +24,7 @@
         std::cout << "Name is "<< this->name << " and age is "<< this->age << std::endl;
     }
 
-    ostream & operator << (ostream& output, User &user){
+    std::ostream & operator << (std::ostream& output, User &user){
         output << user.name << std::endl;
         return output;
     }
