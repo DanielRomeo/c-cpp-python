@@ -1,15 +1,15 @@
 #include <iostream>
 
 struct Node {
-	int data;
-	Node * left;
-	Node * rigtt;
-}
+	int data = NULL;
+	Node * left= NULL;
+	Node * right= NULL;
+};
 
 Node * createNode(int item){
 	Node * newNode = new Node();
 	newNode->data = item;
-	return newNode();
+	return newNode;
 }
 
 int main(){
