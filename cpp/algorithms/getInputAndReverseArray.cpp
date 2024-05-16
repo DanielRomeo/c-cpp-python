@@ -1,6 +1,11 @@
 #include <iostream>
 #include <stack>
 using namespace std;
+
+// take the size of the array as N
+// then take the input from the user as variables
+// then print out the output to the screen 
+
 int main() {
 
      /* Enter your code here. Read input from STDIN. Print output to STDOUT */   
