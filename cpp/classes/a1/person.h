@@ -10,6 +10,7 @@ class Person{
 
 public:
     Person(std::string _name, int _age); // constructor
+    Person();
     void GetPersonDetails();
     void SetNewName(std::string newName);
 
