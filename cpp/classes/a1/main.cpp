@@ -1,6 +1,7 @@
 #include <iostream>
 #include <string>
 #include "person.h"
+#include "dateofbirth.h"
 
 
 
@@ -11,6 +12,8 @@ int main(){
     romeo.GetPersonDetails();
 
     lethabo.GetPersonDetails();
+
+    DOB dob(1997,04,24);
 
     return 0;
 }

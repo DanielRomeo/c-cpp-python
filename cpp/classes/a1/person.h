@@ -3,20 +3,26 @@
 
 #include <iostream>
 #include <string>
+#include "dateofbirth.h"
 
 // declaration
 
 class Person{
 
 public:
-    Person(std::string _name, int _age); // constructor
+    // constructors:
+    Person(std::string& name, int & date0fBirth); 
     Person();
-    void GetPersonDetails();
-    void SetNewName(std::string newName);
+    // void GetPersonDetails();
+
+    // mutators:
+    // void SetName(std::string name);
 
 private:
     std::string name;
     int age;
+    DOB date0fBirth;
+    
 };
 
 #endif

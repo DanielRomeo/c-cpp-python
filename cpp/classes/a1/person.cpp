@@ -5,15 +5,18 @@
 
 // implementation
 
-Person::Person(std::string _name, int _age){
-    name = _name;
-    age = _age;
+Person::Person(std::string & name, int & dateOfBirth){
+    this->name = name;
+    this->date0fBirth = date0fBirth;
 }
 
-void Person::GetPersonDetails(){
-    std::cout << "YOur name is " << name << "and your age is " << age << std::endl; 
-}
+// accessors:
+// void Person::GetPersonDetails(){
+//     std::cout << "YOur name is " << name << "and your age is " << age << std::endl; 
+// }
 
-void Person::SetNewName(std::string newName){
-    name = newName;
+
+// mutators:
+void Person::SetName(std::string name){
+    this->name = name;
 }
