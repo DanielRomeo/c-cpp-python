@@ -1,19 +1,5 @@
 #include <iostream>
 #include <cstdlib>
-/**/
-/* we use these arrow functions to derefernect a pointer variable*/
-
-// struct Node
-// {
-// 	int data;
-// 	Node* link = NULL;
-// };
-
-// Node* HeadNode; // this is the head node
-
-
-// template<class Type>
-// Type linkedListType<Type>:: max();
 
 
 class Person{
@@ -28,11 +14,6 @@ public:
 private:
 	int age;
 };
-
-// void Person::getAge(){
-// 	std::cout << "sam" << std::endl; 
-// }
-
 
 int main(){
 	
