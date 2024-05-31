@@ -10,6 +10,7 @@
 
 int main(){
 
+    std::cout << "test compiles and runs" << std::endl;
 
     return 0;
 }
