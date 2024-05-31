@@ -4,7 +4,6 @@
 #include "math.h"
 #include <vector>
 #include <cstdio>
-// using namespace std;
 
 namespace savich1{
     void greetings(){

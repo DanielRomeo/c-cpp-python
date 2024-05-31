@@ -76,7 +76,6 @@ int main(){
 }
 
 // definitions
-        
 Money operator +(const Money& amount1, const Money& amount2){
     Money temp(0);
     temp.dollar = amount1.dollar + amount2.dollar;
