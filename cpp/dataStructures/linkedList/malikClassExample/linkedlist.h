@@ -1,6 +1,8 @@
 #ifndef LINKEDLIST_H
 #define LINKEDLIST_H
 
+#include "linkedListIterator.h"
+
 template<typename Type>
 struct nodeType{
     Type info;

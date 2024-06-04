@@ -67,3 +67,15 @@ Type linkedList<Type>::back() const{
 
 // begin and end:
 // this method returns an iterator to the first element in the linked list:
+template<class Type> 
+linkedListIterator<Type> linkedList<Type>::begin(){
+    linkedListIterator<Type> temp(first);
+    return temp;
+}
+
+// returns iterator pointing to the back of the linkedlist:
+template<class Type> 
+linkedListIterator<Type> linkedList<Type>::end(){
+    linkedListIterator<Type> temp(NULL); // ???
+    return temp;
+}
