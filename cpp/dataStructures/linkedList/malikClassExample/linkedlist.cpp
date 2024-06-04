@@ -79,3 +79,28 @@ linkedListIterator<Type> linkedList<Type>::end(){
     linkedListIterator<Type> temp(NULL); // ???
     return temp;
 }
+
+// copy a linked list from another list into ours:
+// NOTE: THIS linked list, is getting its info from other list:
+// if there is something in our list, we are essentially deleting everything:
+template<class Type>
+void linkedList<Type>::copyList(const linkedList<Type> & otherList){
+    // set the variables:
+    nodeType<Type> *newNode;
+    nodeType<Type> *currentNode;
+
+    // if the our list is not empty, delete all elems:
+    if(first != NULL){
+        destroyList();
+    }
+    // if the other list is empty, then make ours empty as well:
+    if(otherList.first == NULL){
+        first = NULL;
+        last = NULL;
+        count = 0;
+    }else{
+        current = otherList.first;
+        count = otherList.count;
+
+    }
+}
