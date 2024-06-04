@@ -49,6 +49,21 @@ void linkedList<Type>::print() const{
 // return the length of the list:
 template<class Type>
 int linkedList<Type>::length() const{
-    
+    return count;
 }
 
+// returns information of the first node in the linked list:
+template<class Type>
+Type linkedList<Type>::front() const{
+    assert(first != NULL);
+    return first->info;
+}
+// returns information of the last node in the linked list:
+template<class Type>
+Type linkedList<Type>::back() const{
+    assert(last != NULL);
+    return last->info;
+}
+
+// begin and end:
+// this method returns an iterator to the first element in the linked list:
