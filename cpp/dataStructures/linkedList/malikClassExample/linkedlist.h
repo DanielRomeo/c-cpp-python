@@ -33,7 +33,7 @@ protected:
     nodeType<Type> *first; // pointer to the first node of the list
     nodeType<Type> *last;
 private:
-    void copyList(const linkedLIst<Type>& otherList); // copy one list to another 
+    void copyList(const linkedList<Type>& otherList); // copy one list to another 
 };
 
 #endif
