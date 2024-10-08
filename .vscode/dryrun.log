@@ -1,6 +1,0 @@
-make --dry-run --always-make --keep-going --print-directory
-make: Entering directory '/home/exodesktop/Documents/projects/c-cpp-python'
-make: Leaving directory '/home/exodesktop/Documents/projects/c-cpp-python'
- 
-make: *** No targets specified and no makefile found.  Stop.
-

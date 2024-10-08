@@ -1,1 +1,100 @@
 a.out
+
+# User-specific files
+*.rsuser
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# User-specific files (Mono Auto Generated)
+mono_crash.*
+
+# Build results
+[Dd]ebug/
+[Dd]ebugPublic/
+[Rr]elease/
+[Rr]eleases/
+x64/
+x86/
+[Aa][Rr][Mm]/
+[Aa][Rr][Mm]64/
+bld/
+[Bb]in/
+[Oo]bj/
+
+# VS Code directories
+.vscode/
+
+# CMake files
+CMakeLists.txt.user
+CMakeCache.txt
+CMakeFiles/
+Testing/
+Makefile
+CMakeScripts/
+cmake_install.cmake
+CMakeFiles/
+
+# Windows image file caches
+Thumbs.db
+ehthumbs.db
+
+# Folder config file
+Desktop.ini
+
+# Recycle Bin used on file shares
+$RECYCLE.BIN/
+
+# VS Code workspace settings
+.vscode/
+
+# JetBrains Rider project settings
+.idea/
+
+# Python virtual environments
+*.pyc
+*.pyo
+__pycache__/
+
+# Local test databases
+*.vdb
+
+# Compiled DLLs
+*.dll
+
+# Compiled library files
+*.lib
+*.obj
+*.pdb
+
+# Temporary files
+*.tmp
+*.log
+*.vspscc
+*.vssscc
+*.pdb
+
+# Visual Studio profiler
+*.vsp
+*.vspx
+
+# TFS files
+*.tfignore
+*$tf/
+
+# SQL Server files
+*.mdf
+*.ldf
+
+# Web stuff
+node_modules/
+bower_components/
+
+# Package management
+*.nupkg
+*.snupkg
+.packages/
+
+# Windows shortcuts
+*.lnk
