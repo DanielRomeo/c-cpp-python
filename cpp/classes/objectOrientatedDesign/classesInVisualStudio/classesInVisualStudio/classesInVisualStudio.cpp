@@ -2,18 +2,14 @@
 
 class Clock {
 public:
-	// Constructors:
-	Clock();
-	Clock(int hours, int mins, int secs);
+	Clock() {}
 
-	//void testTime(int &hours) {
+	Clock(int _hours, int _mins, int _secs): hours(_hours), mins(_mins), secs(_secs) {}
 
-	//}
-
-	void printHours() {
-		std::cout << hours << std::endl;
+	void printClock() {
+		std::cout << "The time is : " << hours << ":" << mins << ":" << secs << std::endl;
 	}
-
+	
 private:
 	int hours;
 	int mins;
@@ -22,11 +18,8 @@ private:
 
 int main()
 {
-	int hours = 100;
-	int mins = 1;
-	int secs = 30;
-	Clock myClock(hours, mins, secs);
+	Clock myClock;
+	Clock newClock(20, 22, 31);
 
-	//
-	myClock.printHours();
+	newClock.printClock();
 }

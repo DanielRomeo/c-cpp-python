@@ -1,2 +1,2 @@
-﻿classesInVisualStudio.obj : error LNK2019: unresolved external symbol "public: __cdecl Clock::Clock(int,int,int)" (??0Clock@@QEAA@HHH@Z) referenced in function main
-C:\Users\thomasmuller\Documents\projects\c-cpp-python\cpp\classes\objectOrientatedDesign\classesInVisualStudio\x64\Debug\classesInVisualStudio.exe : fatal error LNK1120: 1 unresolved externals
+﻿  classesInVisualStudio.cpp
+  classesInVisualStudio.vcxproj -> C:\Users\thomasmuller\Documents\projects\c-cpp-python\cpp\classes\objectOrientatedDesign\classesInVisualStudio\x64\Debug\classesInVisualStudio.exe
