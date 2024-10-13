@@ -1,18 +1,18 @@
 #include "Shape.h"
 #include "Rectangle.h"
+#include "Box.h"
 
 #include <iostream>
 
 int main()
 {
     Shape myShape;
-    myShape.someFunction();
-    std::cout << myShape.someVariable << std::endl;
 
 
     Rectangle myRect;
-    std::cout << myRect.someVariable << std::endl;
-    //myRect.print();
 
+    Box myBox(3,2,1);
+    //myBox.setDimention(2,6, 8);
+    myBox.print();
 
 }

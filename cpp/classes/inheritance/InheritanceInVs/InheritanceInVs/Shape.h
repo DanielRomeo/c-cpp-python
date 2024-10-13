@@ -7,12 +7,17 @@
 
 class Shape {
 public:
-    Shape() : someVariable(200) {}
+    Shape() : someVariable(4000) {}
 
     void someFunction() {
         std::cout << "This is a function in ClassName" << std::endl;
     }
-public:
+
+    int theVariable() {
+        return someVariable;
+    }
+
+private:
     int someVariable;
 };
 

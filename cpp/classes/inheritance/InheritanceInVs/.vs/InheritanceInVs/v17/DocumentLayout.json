@@ -3,16 +3,20 @@
   "WorkspaceRootPath": "C:\\Users\\thomasmuller\\Documents\\projects\\c-cpp-python\\cpp\\classes\\inheritance\\InheritanceInVs\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{825FE229-D6A5-4CB5-A98E-4A65C56BCC4F}|InheritanceInVs\\InheritanceInVs.vcxproj|C:\\Users\\thomasmuller\\Documents\\projects\\c-cpp-python\\cpp\\classes\\inheritance\\InheritanceInVs\\InheritanceInVs\\Rectangle.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{825FE229-D6A5-4CB5-A98E-4A65C56BCC4F}|InheritanceInVs\\InheritanceInVs.vcxproj|solutionrelative:InheritanceInVs\\Rectangle.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{825FE229-D6A5-4CB5-A98E-4A65C56BCC4F}|InheritanceInVs\\InheritanceInVs.vcxproj|C:\\Users\\thomasmuller\\Documents\\projects\\c-cpp-python\\cpp\\classes\\inheritance\\InheritanceInVs\\InheritanceInVs\\box.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{825FE229-D6A5-4CB5-A98E-4A65C56BCC4F}|InheritanceInVs\\InheritanceInVs.vcxproj|solutionrelative:InheritanceInVs\\box.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{825FE229-D6A5-4CB5-A98E-4A65C56BCC4F}|InheritanceInVs\\InheritanceInVs.vcxproj|C:\\Users\\thomasmuller\\Documents\\projects\\c-cpp-python\\cpp\\classes\\inheritance\\InheritanceInVs\\InheritanceInVs\\InheritanceInVs.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{825FE229-D6A5-4CB5-A98E-4A65C56BCC4F}|InheritanceInVs\\InheritanceInVs.vcxproj|solutionrelative:InheritanceInVs\\InheritanceInVs.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{825FE229-D6A5-4CB5-A98E-4A65C56BCC4F}|InheritanceInVs\\InheritanceInVs.vcxproj|C:\\Users\\thomasmuller\\Documents\\projects\\c-cpp-python\\cpp\\classes\\inheritance\\InheritanceInVs\\InheritanceInVs\\Shape.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{825FE229-D6A5-4CB5-A98E-4A65C56BCC4F}|InheritanceInVs\\InheritanceInVs.vcxproj|solutionrelative:InheritanceInVs\\Shape.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{825FE229-D6A5-4CB5-A98E-4A65C56BCC4F}|InheritanceInVs\\InheritanceInVs.vcxproj|C:\\Users\\thomasmuller\\Documents\\projects\\c-cpp-python\\cpp\\classes\\inheritance\\InheritanceInVs\\InheritanceInVs\\InheritanceInVs.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{825FE229-D6A5-4CB5-A98E-4A65C56BCC4F}|InheritanceInVs\\InheritanceInVs.vcxproj|solutionrelative:InheritanceInVs\\InheritanceInVs.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{825FE229-D6A5-4CB5-A98E-4A65C56BCC4F}|InheritanceInVs\\InheritanceInVs.vcxproj|C:\\Users\\thomasmuller\\Documents\\projects\\c-cpp-python\\cpp\\classes\\inheritance\\InheritanceInVs\\InheritanceInVs\\Rectangle.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{825FE229-D6A5-4CB5-A98E-4A65C56BCC4F}|InheritanceInVs\\InheritanceInVs.vcxproj|solutionrelative:InheritanceInVs\\Rectangle.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,45 +26,57 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "InheritanceInVs.cpp",
               "DocumentMoniker": "C:\\Users\\thomasmuller\\Documents\\projects\\c-cpp-python\\cpp\\classes\\inheritance\\InheritanceInVs\\InheritanceInVs\\InheritanceInVs.cpp",
               "RelativeDocumentMoniker": "InheritanceInVs\\InheritanceInVs.cpp",
               "ToolTip": "C:\\Users\\thomasmuller\\Documents\\projects\\c-cpp-python\\cpp\\classes\\inheritance\\InheritanceInVs\\InheritanceInVs\\InheritanceInVs.cpp",
               "RelativeToolTip": "InheritanceInVs\\InheritanceInVs.cpp",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAbAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2024-10-11T18:21:56.178Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "Shape.h",
               "DocumentMoniker": "C:\\Users\\thomasmuller\\Documents\\projects\\c-cpp-python\\cpp\\classes\\inheritance\\InheritanceInVs\\InheritanceInVs\\Shape.h",
               "RelativeDocumentMoniker": "InheritanceInVs\\Shape.h",
               "ToolTip": "C:\\Users\\thomasmuller\\Documents\\projects\\c-cpp-python\\cpp\\classes\\inheritance\\InheritanceInVs\\InheritanceInVs\\Shape.h",
               "RelativeToolTip": "InheritanceInVs\\Shape.h",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAAVAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAZAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
               "WhenOpened": "2024-10-11T18:38:56.243Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 3,
               "Title": "Rectangle.h",
               "DocumentMoniker": "C:\\Users\\thomasmuller\\Documents\\projects\\c-cpp-python\\cpp\\classes\\inheritance\\InheritanceInVs\\InheritanceInVs\\Rectangle.h",
               "RelativeDocumentMoniker": "InheritanceInVs\\Rectangle.h",
               "ToolTip": "C:\\Users\\thomasmuller\\Documents\\projects\\c-cpp-python\\cpp\\classes\\inheritance\\InheritanceInVs\\InheritanceInVs\\Rectangle.h",
               "RelativeToolTip": "InheritanceInVs\\Rectangle.h",
-              "ViewState": "AQIAAAwAAAAAAAAAAAAAABQAAAAAAAAA",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAABUAAAATAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2024-10-11T18:41:01.989Z",
+              "WhenOpened": "2024-10-11T18:41:01.989Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "box.h",
+              "DocumentMoniker": "C:\\Users\\thomasmuller\\Documents\\projects\\c-cpp-python\\cpp\\classes\\inheritance\\InheritanceInVs\\InheritanceInVs\\box.h",
+              "RelativeDocumentMoniker": "InheritanceInVs\\box.h",
+              "ToolTip": "C:\\Users\\thomasmuller\\Documents\\projects\\c-cpp-python\\cpp\\classes\\inheritance\\InheritanceInVs\\InheritanceInVs\\box.h",
+              "RelativeToolTip": "InheritanceInVs\\box.h",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABMAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2024-10-12T05:04:48.486Z",
               "EditorCaption": ""
             }
           ]

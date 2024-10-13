@@ -8,13 +8,26 @@
 // member access specifier here is private, protected, public:
 class Rectangle: public Shape {
 public:
-    Rectangle(){
-    
+    Rectangle(): height(0), width(0){} // default constructor
+    Rectangle(double h, double w): height(h), width(w) {}
+
+    void printVariable() {
+        std::cout << theVariable() << std::endl;
     }
 
     void print() {
-        std::cout << someVariable << std::endl;
+        std::cout << "Height is : " << height << " ,width is : " << width ;
     }
+
+    // setDimention mutator:
+    void setDimention(double h, double w) {
+        height = h;
+        width = w;
+    }
+   
+private:
+    double height;
+    double width;
 };
 
 #endif
