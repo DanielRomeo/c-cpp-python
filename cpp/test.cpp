@@ -1,42 +1,37 @@
 #include <iostream>
 #include <stack>
+#include <string>
+#include <vector>
 
-class Car{
-
-};
-
-class Person{
-public:
-    Person(std::string name, int age){
-        this->name = name;
-        this->age = age;
+// create a function that prints:
+void print(std::string s, int printIteration = 0) {
+    if(printIteration > 0){
+        for(auto i =0; i < printIteration; i++){
+            std::cout << s << std::endl;
+        }
     }
+}
 
-    // copy constructor:
-    // if you do not write this yourself, the compiler automatically will
-    Person(Person &person){
-        this->name = person.name;
-        this->age = person.age;
-    };
-
-    void getName(){
-        std::cout << "The user name is :" << this->name << std::endl;
+void printVector(std::vector<int> myVector){
+    std::vector<int>::iterator it = myVector.begin();
+    while(it != myVector.end()){
+        std::cout << *it << std::endl;
+        it++;
     }
-private:
-    std::string name;
-    int age;
+    
+}
 
-};
 
 int main() {
 
-    Person dan("dan", 12);
-    Person sam("sam", 20);
-    Person kim(sam);
-    kim.getName();
+    int count = 9;
+    
+    std::string sName = "Jaohn";
+    // print(sName, 10);
 
-
-
+    std::vector<int> vec = {1,2,3,4,55,66};
+    printVector(vec);
+   
     
     return 0;
 }
