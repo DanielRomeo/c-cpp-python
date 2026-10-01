@@ -13,13 +13,11 @@ public:
         return instance;
     }
 
-    
-
-
 };
 
 int main(){
     //
+    Singleton& singleton1 = Singleton::get_instance();
 
     return 0;
 }
