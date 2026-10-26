@@ -1,6 +1,7 @@
 ﻿// Classes, Objects and properties:
 
-Article article = new Article(1,"Learning c#","Today I learned c#", "Daniel");
+// Insantiate and use the class:
+Article article = new Article("Learning c#","Today I learned c#","1");
 
 
 
@@ -30,26 +31,36 @@ public class Article
         isPublished = false;
         CreatedAt = DateTime.UtcNow;
         PublishedAt = null;
-
     }
 
-    
-    public isPublished()
+    // Update article content:
+    public void Update(string title, string content)
     {
-        return _isPublished;
+        if (string.IsNullOrWhiteSpace(title) || string.IsNullOrWhiteSpace(content))
+        {
+            throw new ArgumentException("Title and Content is required.");
+        }
+        Title = title;
+        Content = content;
     }
-
     
-    // set all remaning member variables...
-
-    // Business methods:
+    // publish an article:
     public void Publish()
     {
-        _isPublished = true;
+        if (isPublished)
+        {
+            return;
+        }
+
+        isPublished = true;
+        PublishedAt = DateTime.UtcNow;
     }
-    public void unPublish()
+
+    // Unpublish an artticle
+    public void Unpublish()
     {
-        _isPublished = false;
+        isPublished = false;
+        PublishedAt = null;
     }
 
 }
